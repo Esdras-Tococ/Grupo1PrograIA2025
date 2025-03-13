@@ -1,51 +1,31 @@
 
 package com.mycompany.proyecto.Zoologico;
 
-public class Mamifero {
+public class Mamifero extends Animal{
   
-  private String patas;
-  private String tipos;
-  private String reproduccion;
-  private String alimentacion;
+    
+    
+    private String Especie;
+    private String Tipo_Pelaje;
+    private String Alimentacion;
+    
 
-  public Mamifero(String patas, String tipos, String reproduccion, String alimentacion) {
-        this.patas = patas;
-        this.tipos = tipos;
-        this.reproduccion = reproduccion;
-        this.alimentacion = alimentacion;
+  public Mamifero(String Nombre, int Peso , int Altura, int Edad, String Especie, String Tipo_pelaje, String Alimentacion){
+       
+        super(Nombre, Peso, Altura,Edad);
+        
+        this.Alimentacion=Alimentacion;
+        this.Especie=Especie;
+        this.Tipo_Pelaje =Tipo_pelaje;
+        
     }
-
-    public String getPatas() {
-        return patas;
-    }
-
-    public void setPatas(String patas) {
-        this.patas = patas;
-    }
-
-    public String getTipos() {
-        return tipos;
-    }
-
-    public void setTipos(String tipos) {
-        this.tipos = tipos;
-    }
-
-    public String getReproduccion() {
-        return reproduccion;
-    }
-
-    public void setReproduccion(String reproduccion) {
-        this.reproduccion = reproduccion;
-    }
-
-    public String getAlimentacion() {
-        return alimentacion;
-    }
-
-    public void setAlimentacion(String alimentacion) {
-        this.alimentacion = alimentacion;
-    }
+    
+   
+    @Override
+    public String toString(){
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Especie+Tipo_Pelaje+", "+Alimentacion ;
+    };
+    
   
   
   
