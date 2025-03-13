@@ -1,11 +1,14 @@
 
-package com.mycompany.proyecto;
+package com.mycompany.proyecto.Zoologico;
 
 
 public class Animal {
    private String nombre;
    private String especie;
    private int edad;
+   private int jaula;
+   private int recinto;
+   private String alias;
 
     public Animal(String nombre, String especie, int edad) {
         this.nombre = nombre;

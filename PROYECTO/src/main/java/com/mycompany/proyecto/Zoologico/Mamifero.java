@@ -1,5 +1,5 @@
 
-package com.mycompany.proyecto;
+package com.mycompany.proyecto.Zoologico;
 
 public class Mamifero {
   
