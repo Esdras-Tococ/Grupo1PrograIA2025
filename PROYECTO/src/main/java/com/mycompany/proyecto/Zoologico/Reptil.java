@@ -1,52 +1,68 @@
 
-package com.mycompany.proyecto;
+package com.mycompany.proyecto.Zoologico;
 
-public class Reptil {
-    
-    private String escamas;
-    private String sangre;
-    private String reproduccion;
-    private String alimentacion;
+public class Reptil extends Animal{
+      
+    private String Tipo_Escamas;
+    private boolean es_Venenoso;
 
-    public Reptil(String escamas, String sangre, String reproduccion, String alimentacion) {
-        this.escamas = escamas;
-        this.sangre = sangre;
-        this.reproduccion = reproduccion;
-        this.alimentacion = alimentacion;
+    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String nombre, double Peso, int Edad, double Altura) {
+        super(nombre, Peso, Edad, Altura);
+        this.Tipo_Escamas = Tipo_Escamas;
+        this.es_Venenoso = es_Venenoso;
     }
 
-    public String getEscamas() {
-        return escamas;
+    public String getTipo_Escamas() {
+        return Tipo_Escamas;
     }
 
-    public void setEscamas(String escamas) {
-        this.escamas = escamas;
+    public void setTipo_Escamas(String Tipo_Escamas) {
+        this.Tipo_Escamas = Tipo_Escamas;
     }
 
-    public String getSangre() {
-        return sangre;
+    public boolean isEs_Venenoso() {
+        return es_Venenoso;
     }
 
-    public void setSangre(String sangre) {
-        this.sangre = sangre;
+    public void setEs_Venenoso(boolean es_Venenoso) {
+        this.es_Venenoso = es_Venenoso;
     }
 
-    public String getReproduccion() {
-        return reproduccion;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setReproduccion(String reproduccion) {
-        this.reproduccion = reproduccion;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
-    public String getAlimentacion() {
-        return alimentacion;
+    public double getPeso() {
+        return Peso;
     }
 
-    public void setAlimentacion(String alimentacion) {
-        this.alimentacion = alimentacion;
+    public void setPeso(double Peso) {
+        this.Peso = Peso;
     }
-    
-    
+
+    public int getEdad() {
+        return Edad;
+    }
+
+    public void setEdad(int Edad) {
+        this.Edad = Edad;
+    }
+
+    public double getAltura() {
+        return Altura;
+    }
+
+    public void setAltura(double Altura) {
+        this.Altura = Altura;
+    }
+
+  @Override
+    public String toString(){
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Tipo_Escamas+", "+es_Venenoso ;
+    }; 
     
 }

@@ -1,51 +1,71 @@
 
-package com.mycompany.proyecto;
+package com.mycompany.proyecto.Zoologico;
 
-public class Ave {
+public class Ave extends Animal{
     
-    private String movilidad;
-    private String plumas;
-    private String reproduccion;
-    private String alimentacion;
+    private boolean Puede_Volar;
+    private String Plumas;
 
-    public Ave(String movilidad, String plumas, String reproduccion, String alimentacion) {
-        this.movilidad = movilidad;
-        this.plumas = plumas;
-        this.reproduccion = reproduccion;
-        this.alimentacion = alimentacion;
+    public Ave(boolean Puede_Volar, String Plumas, String nombre, double Peso, int Edad, double Altura) {
+        super(nombre, Peso, Edad, Altura);
+        this.Puede_Volar = Puede_Volar;
+        this.Plumas = Plumas;
     }
 
-    public String getMovilidad() {
-        return movilidad;
+    public boolean isPuede_Volar() {
+        return Puede_Volar;
     }
 
-    public void setMovilidad(String movilidad) {
-        this.movilidad = movilidad;
+    public void setPuede_Volar(boolean Puede_Volar) {
+        this.Puede_Volar = Puede_Volar;
     }
 
     public String getPlumas() {
-        return plumas;
+        return Plumas;
     }
 
-    public void setPlumas(String plumas) {
-        this.plumas = plumas;
+    public void setPlumas(String Plumas) {
+        this.Plumas = Plumas;
     }
 
-    public String getReproduccion() {
-        return reproduccion;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setReproduccion(String reproduccion) {
-        this.reproduccion = reproduccion;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
-    public String getAlimentacion() {
-        return alimentacion;
+    public double getPeso() {
+        return Peso;
     }
 
-    public void setAlimentacion(String alimentacion) {
-        this.alimentacion = alimentacion;
+    public void setPeso(double Peso) {
+        this.Peso = Peso;
     }
-    
+
+    public int getEdad() {
+        return Edad;
+    }
+
+    public void setEdad(int Edad) {
+        this.Edad = Edad;
+    }
+
+    public double getAltura() {
+        return Altura;
+    }
+
+    public void setAltura(double Altura) {
+        this.Altura = Altura;
+    }
+
+@Override
+    public String toString(){
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Puede_Volar+", "+Plumas ;
+    };   
     
 }
+
+       
+   

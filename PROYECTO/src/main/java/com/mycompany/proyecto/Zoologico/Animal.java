@@ -14,8 +14,6 @@ public class Animal {
         this.Peso = Peso;
         this.Edad = Edad;
         this.Altura= Altura;
-    }
-
-   
+    }   
     
 }
