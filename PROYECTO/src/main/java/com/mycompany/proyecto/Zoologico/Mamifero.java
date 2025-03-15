@@ -10,9 +10,9 @@ public class Mamifero extends Animal{
     private String Alimentacion;
     
 
-  public Mamifero(String Nombre, int Peso , int Altura, int Edad, String Especie, String Tipo_pelaje, String Alimentacion){
+  public Mamifero(String Nombre, int Peso , int Altura, int Edad, String Alias, String Especie, String Tipo_pelaje, String Alimentacion){
        
-        super(Nombre, Peso, Altura,Edad);
+        super(Nombre, Peso, Altura,Edad, Alias);
         
         this.Alimentacion=Alimentacion;
         this.Especie=Especie;
@@ -79,7 +79,7 @@ public class Mamifero extends Animal{
    
     @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Especie+Tipo_Pelaje+", "+Alimentacion ;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+"," +Especie+Tipo_Pelaje+", "+Alimentacion ;
     };
   
 }

@@ -6,8 +6,8 @@ public class Reptil extends Animal{
     private String Tipo_Escamas;
     private boolean es_Venenoso;
 
-    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String nombre, double Peso, int Edad, double Altura) {
-        super(nombre, Peso, Edad, Altura);
+    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String nombre, double Peso, int Edad, double Altura, String Alias) {
+        super(nombre, Peso, Edad, Altura, Alias);
         this.Tipo_Escamas = Tipo_Escamas;
         this.es_Venenoso = es_Venenoso;
     }
