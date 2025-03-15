@@ -1,8 +1,6 @@
 
 package com.mycompany.proyecto;
-import com.mycompany.proyecto.Zoologico.Animal;
-import com.mycompany.proyecto.Zoologico.Exportar;
-import com.mycompany.proyecto.Zoologico.Mamifero;
+
 import java.util.Scanner;
 
 public class Menu {
