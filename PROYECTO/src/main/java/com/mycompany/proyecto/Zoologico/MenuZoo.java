@@ -3,30 +3,22 @@ package com.mycompany.proyecto.Zoologico;
 
 import java.util.Scanner;
 
+
 public class MenuZoo {
     
     
     
     
-    public static void main(String[] args) {
-      
-        
-        
-        
-    
-        
+   
   
         
-        
-    }
     
-   
     public static void MenuCalculadora() {
        boolean entry = true;
         while(entry){
             try {
         System.out.println("CALCULADOR DE CONSUMO DE ALIMENTO\n");
-        System.out.println("INGRESE EL ANIMAL ,ALIAS O ID\n");
+        System.out.println("INGRESE EL ANIMAL  ALIAS\n");
         Scanner sc = new Scanner(System.in);
         String animal = sc.nextLine();
        int  cantidad = Calculadora.Consulta(animal);
@@ -50,13 +42,7 @@ public class MenuZoo {
             } catch (Exception e) {
                 System.out.println("Ingrese un dato valido");
             }
-        
+            
         }
-      
-        
     }
-    
-    
-  
-    
 }
