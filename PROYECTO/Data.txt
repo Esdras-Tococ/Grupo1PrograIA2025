@@ -1,0 +1,21 @@
+0,leon africano,190 kg,8 años,1.2 m,el rey,7
+1,elefante asiático,4500 kg,25 años,3 m,dumbo,150 
+2,jirafa masai,800 kg,12 años,5.5 m,cuello largo,30
+3,tigre de bengala,220 kg,10 años,1.1 m,rayas,6
+4,cebra de las llanuras,350 kg,7 años,1.4 m,zippy,12
+5,oso pardo,600 kg,15 años,1.5 m,big bear,40
+6,lobo gris,45 kg,6 años,0.8 m,shadow,4
+7,cocodrilo del nilo,500 kg,50 años,5 m,chomp,8 
+8,puma,75 kg,9 años,0.9 m,felix,5
+9,gorila de montaña,160 kg,14 años,1.7 m,kong,25
+10,hipopotamo,1500 kg,30 años,1.5 m,hippo,40
+11,rinoceronte blanco,2300 kg,35 años,1.8 m,rhino,50  
+12,aguila real,6.5 kg,20 años,0.9 m,fénix,0.5
+13,jaguar,100 kg,11 años,0.8 m,pantera,5
+14,antilope,120 kg,9 años,1.2 m,swift,8
+15,orangutan,90 kg,13 años,1.4 m,mango,15
+16,bufalo africano,700 kg,18 años,1.7 m,horns,30 
+17,pinguino emperador,35 kg,20 años,1.1 m,flipper,3 
+18,koala,15 kg,10 años,0.7 m,sleepy,1
+19,camello,600 kg,40 años,2.1 m,sandy,20
+
