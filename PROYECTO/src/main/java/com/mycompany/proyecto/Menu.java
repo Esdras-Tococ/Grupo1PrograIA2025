@@ -2,13 +2,13 @@
 package com.mycompany.proyecto;
 
 import java.util.Scanner;
-import com.ejemplo.menuZoologico.menuZoologico;
+import com.mycompany.proyecto.Zoologico.MenuZoo;
 
 
 
 public class Menu {
     public static void main(String[] args) {
-         Zoologico zoologico = new Zoologico();
+         MenuZoo Zoologico = new MenuZoo();
          Scanner scanner= new Scanner(System.in);
          boolean salir =true;
          int opcion;
