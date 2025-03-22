@@ -6,6 +6,7 @@ import com.mycompany.proyecto.Zoologico.MenuZoo;
 
 
 
+
 public class Menu {
     public static void main(String[] args) {
          Scanner scanner= new Scanner(System.in);
@@ -22,9 +23,10 @@ public class Menu {
             System.out.println("opcion 3.Fase III:");
             System.out.println("opcion 4.Salir: ");
             opcion =scanner.nextInt();
-            scanner.nextLine();
+         
             
             try {
+                
                  switch (opcion){
                
                 case 1:
@@ -46,7 +48,7 @@ public class Menu {
                  }
                 
             } catch (Exception e) {
-                System.err.println("ingrese una opcion valid:.");
+                System.err.println("ingrese una opcion validad:.");
                 System.err.println("por fvor, selecione una opcion del menu:");
             }
            

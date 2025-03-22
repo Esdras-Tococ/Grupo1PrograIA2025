@@ -11,8 +11,9 @@ import java.nio.file.Paths;
 
 public class Registros {
     private static boolean columnas = false;
-    public static void Export() {
-        String archivoCSV ="data.csv";
+    public static void Export(String nombre) {
+        
+        String archivoCSV =nombre+".csv";
         
         try (FileReader fr = new FileReader("Data.txt",StandardCharsets.UTF_8)) {
          BufferedReader br = new BufferedReader(fr);
@@ -40,7 +41,7 @@ public class Registros {
         
         
         
-        
+        System.out.println("Se exporto con exito!!!!");
        
         
         
