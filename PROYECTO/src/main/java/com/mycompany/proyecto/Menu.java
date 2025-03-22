@@ -1,4 +1,4 @@
-
+    
 package com.mycompany.proyecto;
 
 import java.util.Scanner;
@@ -8,7 +8,6 @@ import com.mycompany.proyecto.Zoologico.MenuZoo;
 
 public class Menu {
     public static void main(String[] args) {
-         MenuZoo Zoologico = new MenuZoo();
          Scanner scanner= new Scanner(System.in);
          boolean salir =true;
          int opcion;
@@ -25,10 +24,12 @@ public class Menu {
             opcion =scanner.nextInt();
             scanner.nextLine();
             
-            
-            switch (opcion){
+            try {
+                 switch (opcion){
+               
                 case 1:
-                     System.out.println("zoologico"); 
+                 MenuZoo a = new MenuZoo();       
+                 a.zoo();
                     break;
                 case 2:
                     System.out.println("Fase II ");
@@ -42,11 +43,16 @@ public class Menu {
                 default:
                     System.out.println("opcion invalidad seleccione una opcion del menu:");
                     break;
+                 }
+                
+            } catch (Exception e) {
+                System.err.println("ingrese una opcion valid:.");
+                System.err.println("por fvor, selecione una opcion del menu:");
             }
            
         }
     }
-
+    
    
         
     }

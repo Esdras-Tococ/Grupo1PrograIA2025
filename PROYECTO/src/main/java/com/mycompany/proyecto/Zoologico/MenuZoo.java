@@ -17,10 +17,9 @@ public class MenuZoo {
             System.out.println("=== Menú Zoo ===");
             System.out.println("1. Registrar nuevo animal");
             System.out.println("2. Listar todos los animales");
-            System.out.println("3. Alimentar a los animales");
-            System.out.println("4. Calcular el alimento consumido en un periodo de días");
-            System.out.println("5. Guardar datos en archivo CSV");
-            System.out.println("6. Salir");
+            System.out.println("3. Calcular el alimento consumido en un periodo de días");
+            System.out.println("4. Guardar datos en archivo CSV");
+            System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); 
@@ -34,17 +33,14 @@ public class MenuZoo {
                     //listarAnimales();
                     break;
                 case 3:
-                    //alimentarAnimales(scanner);
-                    break;
-                case 4:
                     MenuCalculadora();
                     break;
-                case 5:
-                  Registros b = new Registros();       
-                 b.Export();
+                case 4:
+                  //CrearArchivo b = new CrearArchivo();       
+                   // b.hashCode();
                  
                     break;
-                case 6:
+                case 5:
                     System.out.println("Hasta pronto    ");
                     System.out.println("regresando al menu principal");
                     return;
@@ -61,15 +57,37 @@ public class MenuZoo {
     
     public  void registrarAnimales() {
         Scanner scanner= new Scanner(System.in);
-        System.out.print("Ingrese el nombre del animal: ");
+        System.out.println("Registrar una nuevo animal:");
+        try {
+             System.out.print("Ingrese el nombre del animal: ");
         String nombre = scanner.nextLine();
-        System.out.print("Ingrese el tipo (mamífero, ave, reptil): ");
-        String tipo = scanner.nextLine();
-        System.out.print("Ingrese el tipo de dieta (herbívoro, carnívoro, omnívoro): ");
-        String dieta = scanner.nextLine();
-        System.out.print("Ingrese la cantidad de alimento por día en kg: ");
-        double cantidadAlimento = scanner.nextDouble();
-        scanner.nextLine();
+        
+        System.out.println("ingrese el peso :");
+        double peso= scanner.nextInt();
+        
+        System.out.print("Ingrese el alisas: ");
+        String alias = scanner.nextLine();
+        
+        System.out.print("Ingrese la edad : ");
+        int edad = scanner.nextInt();
+        
+        System.out.println("ingrese la alturra:");
+        double altura = scanner.nextInt();
+            
+        } catch (Exception e) {
+            System.out.println("ingrese un dato valido : ");
+        }
+       
+        try {
+          //  animal nuevoAnimal = new animal(nombre, peso,alias, edad,altura );
+        //animal.add(nuevoAnimal);
+
+        System.out.println("¡Animal agregado exitosamente!");
+       
+            
+        } catch (Exception e) {
+            System.out.println("animal no pudo agregare:");
+        }
         
     
         
