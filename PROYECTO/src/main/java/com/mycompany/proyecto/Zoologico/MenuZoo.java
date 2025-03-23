@@ -147,7 +147,7 @@ public class MenuZoo {
                 }
                 else{
                 
-                    System.out.println("No existe el animal\n");
+                    System.out.println("No existe el animal\n:");
                 }
       
                 
