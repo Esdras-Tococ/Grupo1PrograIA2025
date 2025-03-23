@@ -27,11 +27,13 @@ public class MenuZoo {
 
             switch (opcion) {
                 case 1:
-                    registrarAnimales();
+            
+                    
+                  //  Registros.save(datos);
 
                     break;
                 case 2:
-                    //listarAnimales();
+                
                     break;
                 case 3:
                     MenuCalculadora();
@@ -40,6 +42,7 @@ public class MenuZoo {
                    
                 System.out.println("Ingrese nombre para exportar el archivio\n");
                 String nombre = scanner.next();
+                   
                 Registros.Export(nombre);
     
                     break;
@@ -121,7 +124,10 @@ public class MenuZoo {
                 
             }
         }
+        System.out.println("Selccione ");
      
+      
+        
         }
       
    
@@ -134,7 +140,9 @@ public class MenuZoo {
         Scanner sc = new Scanner(System.in);
         String animal = sc.nextLine();
        int  cantidad = Calculadora.Consulta(animal);
-                if (cantidad!=0) {
+                //System.out.println(cantidad);
+       
+       if (cantidad!=0) {
         System.out.println("INGRESE LOS DIAS DE CONSUMO O A CONSUMIR\n");
         int dias = sc.nextInt();
        System.out.println("El consumo Total de Comida del "+animal+" es de: " + Calculadora.Consumo(cantidad, dias)+"kg\n");
@@ -145,10 +153,17 @@ public class MenuZoo {
             }
                     
                 }
-                else{
+       
+        else{
                 
                     System.out.println("No existe el animal\n:");
-                }
+                    System.out.println("Presione 0 para finalizar o 1 para continuar");
+                    int user = sc.nextInt();
+                    if (user == 0) {
+                        
+               entry= false;
+           }
+         }
       
                 
             } catch (Exception e) {

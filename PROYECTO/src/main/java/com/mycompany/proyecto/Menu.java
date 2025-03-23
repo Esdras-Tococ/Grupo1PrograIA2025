@@ -1,4 +1,5 @@
-    
+
+
 package com.mycompany.proyecto;
 
 import java.util.Scanner;

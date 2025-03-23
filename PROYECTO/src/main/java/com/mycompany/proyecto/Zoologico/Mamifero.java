@@ -7,14 +7,14 @@ public class Mamifero extends Animal{
     
     private String Especie;
     private String Tipo_Pelaje;
-    private String Alimentacion;
+
     
 
-  public Mamifero(String Nombre, int Peso , int Altura, int Edad, String Alias, String Especie, String Tipo_pelaje, String Alimentacion){
+  public Mamifero(String Nombre, int Peso , int Altura, int Edad, String Alias, String Especie, String Tipo_pelaje, double Consumo){
        
-        super(Nombre, Peso, Altura,Edad, Alias);
+        super(Nombre, Peso, Altura,Edad, Alias, Consumo);
         
-        this.Alimentacion=Alimentacion;
+
         this.Especie=Especie;
         this.Tipo_Pelaje =Tipo_pelaje;
         
@@ -36,13 +36,7 @@ public class Mamifero extends Animal{
         this.Tipo_Pelaje = Tipo_Pelaje;
     }
 
-    public String getAlimentacion() {
-        return Alimentacion;
-    }
-
-    public void setAlimentacion(String Alimentacion) {
-        this.Alimentacion = Alimentacion;
-    }
+   
 
     public String getNombre() {
         return Nombre;
@@ -79,7 +73,7 @@ public class Mamifero extends Animal{
    
     @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+"," +Especie+Tipo_Pelaje+", "+Alimentacion ;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+","+","+Consumo+"," +Especie+Tipo_Pelaje;
     };
   
 }

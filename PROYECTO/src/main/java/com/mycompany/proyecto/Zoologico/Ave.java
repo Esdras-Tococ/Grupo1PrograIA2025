@@ -6,8 +6,8 @@ public class Ave extends Animal{
     private boolean Puede_Volar;
     private String Plumas;
 
-    public Ave(boolean Puede_Volar, String Plumas, String nombre, double Peso, int Edad, double Altura, String Alias) {
-        super(nombre, Peso, Edad, Altura,Alias);
+    public Ave(boolean Puede_Volar, String Plumas, String nombre, double Peso, int Edad, double Altura, String Alias, double Consumo) {
+        super(nombre, Peso, Edad, Altura,Alias,Consumo);
         this.Puede_Volar = Puede_Volar;
         this.Plumas = Plumas;
     }
@@ -62,7 +62,7 @@ public class Ave extends Animal{
 
 @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Puede_Volar+", "+Plumas ;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Consumo+", "+Puede_Volar+", "+Plumas ;
     };   
     
 }

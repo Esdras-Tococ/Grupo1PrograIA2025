@@ -6,8 +6,8 @@ public class Reptil extends Animal{
     private String Tipo_Escamas;
     private boolean es_Venenoso;
 
-    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String nombre, double Peso, int Edad, double Altura, String Alias) {
-        super(nombre, Peso, Edad, Altura, Alias);
+    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String nombre, double Peso, int Edad, double Altura, String Alias, double Consumo) {
+        super(nombre, Peso, Edad, Altura, Alias, Consumo);
         this.Tipo_Escamas = Tipo_Escamas;
         this.es_Venenoso = es_Venenoso;
     }
@@ -62,7 +62,7 @@ public class Reptil extends Animal{
 
   @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Tipo_Escamas+", "+es_Venenoso ;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Alias+","+Consumo+","+Tipo_Escamas+", "+es_Venenoso ;
     }; 
     
 }
