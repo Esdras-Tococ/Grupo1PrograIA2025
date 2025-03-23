@@ -6,8 +6,8 @@ public class Reptil extends Animal{
     private String Tipo_Escamas;
     private boolean es_Venenoso;
 
-    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String nombre, double Peso, int Edad, double Altura, String Alias, double Consumo) {
-        super(nombre, Peso, Edad, Altura, Alias, Consumo);
+    public Reptil(String Tipo_Escamas, boolean es_Venenoso, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        super(Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
         this.Tipo_Escamas = Tipo_Escamas;
         this.es_Venenoso = es_Venenoso;
     }
@@ -60,9 +60,38 @@ public class Reptil extends Animal{
         this.Altura = Altura;
     }
 
+    public String getAlias() {
+        return Alias;
+    }
+
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    public double getConsumo() {
+        return Consumo;
+    }
+
+    public void setConsumo(double Consumo) {
+        this.Consumo = Consumo;
+    }
+
+    public String getDieta() {
+        return Dieta;
+    }
+
+    public void setDieta(String Dieta) {
+        this.Dieta = Dieta;
+    }
+    
   @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Alias+","+Consumo+","+Tipo_Escamas+", "+es_Venenoso ;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Alias+","+Consumo+","+Dieta+","+Tipo_Escamas+", "+es_Venenoso ;
     }; 
-    
+
+    @Override
+    public void Alimentar() {
+        System.out.println("Se alimenta de:"+getNombre()+Dieta);
+    }
+   
 }

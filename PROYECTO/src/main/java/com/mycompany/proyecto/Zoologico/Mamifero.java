@@ -8,16 +8,10 @@ public class Mamifero extends Animal{
     private String Especie;
     private String Tipo_Pelaje;
 
-    
-
-  public Mamifero(String Nombre, int Peso , int Altura, int Edad, String Alias, String Especie, String Tipo_pelaje, double Consumo){
-       
-        super(Nombre, Peso, Altura,Edad, Alias, Consumo);
-        
-
-        this.Especie=Especie;
-        this.Tipo_Pelaje =Tipo_pelaje;
-        
+    public Mamifero(String Especie, String Tipo_Pelaje, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        super(Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
+        this.Especie = Especie;
+        this.Tipo_Pelaje = Tipo_Pelaje;
     }
 
     public String getEspecie() {
@@ -35,8 +29,6 @@ public class Mamifero extends Animal{
     public void setTipo_Pelaje(String Tipo_Pelaje) {
         this.Tipo_Pelaje = Tipo_Pelaje;
     }
-
-   
 
     public String getNombre() {
         return Nombre;
@@ -69,11 +61,41 @@ public class Mamifero extends Animal{
     public void setAltura(double Altura) {
         this.Altura = Altura;
     }
-    
+
+    public String getAlias() {
+        return Alias;
+    }
+
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    public double getConsumo() {
+        return Consumo;
+    }
+
+    public void setConsumo(double Consumo) {
+        this.Consumo = Consumo;
+    }
+
+    public String getDieta() {
+        return Dieta;
+    }
+
+    public void setDieta(String Dieta) {
+        this.Dieta = Dieta;
+    }
+
+   
    
     @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+","+","+Consumo+"," +Especie+Tipo_Pelaje;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+","+","+Consumo+","+Dieta+","+Especie+Tipo_Pelaje;
     };
+
+    @Override
+    public void Alimentar() {
+       System.out.println("Se alimenta de:"+getNombre()+Dieta);
+    }
   
 }

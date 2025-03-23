@@ -6,8 +6,8 @@ public class Ave extends Animal{
     private boolean Puede_Volar;
     private String Plumas;
 
-    public Ave(boolean Puede_Volar, String Plumas, String nombre, double Peso, int Edad, double Altura, String Alias, double Consumo) {
-        super(nombre, Peso, Edad, Altura,Alias,Consumo);
+    public Ave(boolean Puede_Volar, String Plumas, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        super(Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
         this.Puede_Volar = Puede_Volar;
         this.Plumas = Plumas;
     }
@@ -60,11 +60,40 @@ public class Ave extends Animal{
         this.Altura = Altura;
     }
 
+    public String getAlias() {
+        return Alias;
+    }
+
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    public double getConsumo() {
+        return Consumo;
+    }
+
+    public void setConsumo(double Consumo) {
+        this.Consumo = Consumo;
+    }
+
+    public String getDieta() {
+        return Dieta;
+    }
+
+    public void setDieta(String Dieta) {
+        this.Dieta = Dieta;
+    }
+
+    
 @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Consumo+", "+Puede_Volar+", "+Plumas ;
-    };   
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Consumo+","+Dieta+","+Puede_Volar+", "+Plumas ;
+    };  
     
+    @Override
+    public void Alimentar() {
+        System.out.println("Se alimenta de:"+getNombre()+Dieta);
+    }
 }
 
        

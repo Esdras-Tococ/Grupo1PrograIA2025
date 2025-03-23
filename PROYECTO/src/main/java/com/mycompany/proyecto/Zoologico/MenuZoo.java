@@ -127,7 +127,13 @@ public class MenuZoo {
         System.out.println("Selccione ");
      
       
-        
+         public void alimentarAnimal(int id) {
+        if (id >= 1 && id <= animales.size()) {
+            Animal animal = animales.get(id - 1);
+            animal.alimentar();
+        } else {
+            System.out.println("Selección inválida, por favor elige un animal de la lista.");
+        }
         }
       
    

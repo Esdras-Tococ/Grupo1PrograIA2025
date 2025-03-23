@@ -9,15 +9,19 @@ public class Animal {
    protected double Altura;
    protected String Alias;
    protected double Consumo;
- 
+   protected String Dieta;
 
-    public Animal(String nombre, double Peso, int Edad, double Altura, String Alias, double Consumo) {
-        this.Nombre = nombre;
+    public Animal(String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        this.Nombre = Nombre;
         this.Peso = Peso;
         this.Edad = Edad;
-        this.Altura= Altura;
+        this.Altura = Altura;
         this.Alias = Alias;
         this.Consumo = Consumo;
-    }   
+        this.Dieta = Dieta;
     
+    }   
+   public void Alimentar(){
+       System.out.println("El animal se alimenta de:");
+   } 
 }
