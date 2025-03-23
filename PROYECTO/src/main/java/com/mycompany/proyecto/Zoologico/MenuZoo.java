@@ -44,7 +44,7 @@ public class MenuZoo {
     
                     break;
                 case 5:
-                    System.out.println("Alimentar a los animales ");
+                    System.out.println("Alimentar a los animales :");
                     break;
                 case 6:
                     System.out.println("Hasta pronto    ");
