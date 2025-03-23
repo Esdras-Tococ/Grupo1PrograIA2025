@@ -91,7 +91,7 @@ public class Reptil extends Animal{
 
     @Override
     public void Alimentar() {
-        System.out.println("Se alimenta de:"+getNombre()+Dieta);
+       System.out.println("El "+getNombre()+" se alimenta de: " +Dieta);
     }
    
 }

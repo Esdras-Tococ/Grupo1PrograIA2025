@@ -92,7 +92,7 @@ public class Ave extends Animal{
     
     @Override
     public void Alimentar() {
-        System.out.println("Se alimenta de:"+getNombre()+Dieta);
+       System.out.println("El/La "+getNombre()+" se alimenta de: " +Dieta);
     }
 }
 

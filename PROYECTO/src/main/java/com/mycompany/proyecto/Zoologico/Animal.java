@@ -22,6 +22,6 @@ public class Animal {
     
     }   
    public void Alimentar(){
-       System.out.println("El animal se alimenta de:");
+       System.out.println("Se Alimenta el");
    } 
 }

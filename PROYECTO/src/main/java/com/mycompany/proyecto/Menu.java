@@ -41,7 +41,7 @@ public class Menu {
                     System.out.println("Fase III");
                     break;    
                 case 4:
-                    System.out.println("!Hasta proto! gracias por visitar el zoologico:");
+                    System.out.println("!Hasta pronto! gracias por visitar el zoologico:");
                     return;
                 default:
                     System.out.println("opcion invalidad seleccione una opcion del menu:");

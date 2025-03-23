@@ -1,3 +1,5 @@
 0,oso, 90.0, 190.0 ,7,panda,7.0,pescado,pardo,gris
 1,cocodrilo, 90.0, 90.0 ,7,co,7.0,pesces,grandes, false
 2,pelicano, 90.0, 12.0 ,12,frutas,12.0,peli,true, pequenas
+3,leon, 15.0, 4.0 ,5,max,10.0,carne,carnivoro,grueso
+4,gato, 5.0, 2.0 ,5,leo,3.0,pescado,felino,grueso

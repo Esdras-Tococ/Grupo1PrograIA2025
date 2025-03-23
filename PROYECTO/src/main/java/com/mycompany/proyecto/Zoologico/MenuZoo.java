@@ -3,7 +3,7 @@ package com.mycompany.proyecto.Zoologico;
 
 
 import java.util.Scanner;
-
+import java.util.ArrayList;
 
 
 
@@ -48,7 +48,12 @@ public class MenuZoo {
                     break;
                 case 5:
                     System.out.println("Alimentar a los animales :");
-                    String animal = scanner.next();
+                    String animal = scanner.next(); 
+                    Animal Leon = new Mamifero("Carnivoro", "Grueso", "Leon", 15, 5, 6, "MAX", 20, "Carne");
+                    Animal Paloma = new Ave(salir, "Largas", "Paloma", 5, 2, 1, "Grid", 1, "Semillas");
+                            
+                            Leon.Alimentar();
+                            Paloma.Alimentar();
                     
                     break;
                 case 6:
