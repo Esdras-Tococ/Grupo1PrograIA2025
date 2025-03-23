@@ -87,7 +87,7 @@ public class Ave extends Animal{
     
 @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Consumo+","+Dieta+","+Puede_Volar+", "+Plumas ;
+    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Dieta+","+Consumo+","+Alias+","+Puede_Volar+", "+Plumas ;
     };  
     
     @Override

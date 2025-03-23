@@ -29,7 +29,7 @@ public class MenuZoo {
                 case 1:
             
                     
-                  //  Registros.save(datos);
+               registrarAnimales();
 
                     break;
                 case 2:
@@ -48,6 +48,8 @@ public class MenuZoo {
                     break;
                 case 5:
                     System.out.println("Alimentar a los animales :");
+                    String animal = scanner.next();
+                    
                     break;
                 case 6:
                     System.out.println("Hasta pronto    ");
@@ -124,17 +126,82 @@ public class MenuZoo {
                 
             }
         }
-        System.out.println("Selccione ");
+        
+        System.out.println("ingrese el consumo de alimento");
+        double consumo = scanner.nextInt();
+        System.out.println("ingrese la dieta");
+        String dieta = scanner.next();
+        
+   
      
+        
+        
+        System.out.println("Ingrese el tipo de animal: mamifero, ave , reptil\n");
+        String tipo = scanner.next();
+        Animal animal = null;
+        switch (tipo.toLowerCase()) {
+            case "mamifero":
+                System.out.println("ingrese la especie");
+                String especie = scanner.next();
+                System.out.println("ingrese el pelaje");
+                String pelaje = scanner.next();
+               animal = new Mamifero(especie, pelaje,nombre, peso, edad, altura, alias,consumo, dieta);
+                Registros.save(animal.toString());
+                break;
+                case "reptil":
+                    System.out.println("ingrese el tipo de escamas");
+                    String escamas = scanner.next();
+                    System.out.println("si es venenoso ingrese 1 y 0 si no lo es:");
+                    int opcion = scanner.nextInt();
+                    boolean venenoso =true;
+                    
+                    if (opcion==1) {
+                        venenoso = true;
+                        
+                        
+                    }
+                    
+                    else if (opcion ==0) {
+                        venenoso = false;
+                    }
+                    
+                    animal = new Reptil(escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
+                  Registros.save(animal.toString());
+                break;
+                
+                case"ave" :
+                     System.out.println("si puede volar ingrese 1 y 0 si no:");
+                    int opcion2 = scanner.nextInt();
+                    boolean volador =true;
+                    
+                    if (opcion2==1) {
+                        volador= true;
+                        
+                        
+                    }
+                    
+                    else if (opcion2 ==0) {
+                        volador = false;
+                    }
+                    System.out.println("ingrese el tipo de plumas");
+                    String plumas = scanner.next();
+                    
+                animal = new Ave(volador, plumas,nombre, peso, edad, altura, alias, consumo,dieta);
+                  Registros.save(animal.toString());
+                break;
+            default:
+                throw new AssertionError();
+        }
+        
+        
+        
+        
+        
+        
+        
+        
       
-         public void alimentarAnimal(int id) {
-        if (id >= 1 && id <= animales.size()) {
-            Animal animal = animales.get(id - 1);
-            animal.alimentar();
-        } else {
-            System.out.println("Selección inválida, por favor elige un animal de la lista.");
-        }
-        }
+    }
       
    
     public static void MenuCalculadora() {
@@ -145,13 +212,13 @@ public class MenuZoo {
         System.out.println("INGRESE EL ANIMAL  ALIAS\n");
         Scanner sc = new Scanner(System.in);
         String animal = sc.nextLine();
-       int  cantidad = Calculadora.Consulta(animal);
+       double  cantidad = Calculadora.Consulta(animal);
                 //System.out.println(cantidad);
        
        if (cantidad!=0) {
         System.out.println("INGRESE LOS DIAS DE CONSUMO O A CONSUMIR\n");
         int dias = sc.nextInt();
-       System.out.println("El consumo Total de Comida del "+animal+" es de: " + Calculadora.Consumo(cantidad, dias)+"kg\n");
+       System.out.println("El consumo Total de Comida del "+animal+" es de: " + Calculadora.Consumo(dias, cantidad)+"kg\n");
             System.out.println("PULSE 0 PARA FINALIZAR O 1 PARA CONTINUAR");
         int user = sc.nextInt();
             if (user ==0) {

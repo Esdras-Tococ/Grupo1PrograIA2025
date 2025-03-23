@@ -1,2 +1,3 @@
-1,leon,190,8,1.2,melena,4  
-2,oso,180,7,170,osito,7
+0,oso, 90.0, 190.0 ,7,panda,7.0,pescado,pardo,gris
+1,cocodrilo, 90.0, 90.0 ,7,co,7.0,pesces,grandes, false
+2,pelicano, 90.0, 12.0 ,12,frutas,12.0,peli,true, pequenas

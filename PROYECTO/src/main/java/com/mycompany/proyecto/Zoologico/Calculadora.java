@@ -8,7 +8,7 @@ import java.io.FileReader;
 public class Calculadora {
     
     
-    public static int Consulta(String key) {
+    public static double Consulta(String key) {
         
      
         
@@ -21,11 +21,12 @@ public class Calculadora {
                 
         
               for (String a :buscar) {
+                  a.trim();
                   if (a.equals(key.toLowerCase())) {
    
                     String Cantidad = buscar[6];
                   
-                    return Integer.parseInt(Cantidad);
+                    return Double.parseDouble(Cantidad);
                       
                   }
                 
@@ -38,7 +39,7 @@ public class Calculadora {
          catch(Exception e){ return 0;
          }
              
-    return 0;
+    return 0.0;
         
         
         
@@ -53,7 +54,7 @@ public class Calculadora {
 
 
 
-    public static int Consumo(int Dias, int Cantidad) {
+    public static double Consumo(int Dias, double Cantidad) {
      
               if (Dias ==0) {
          return 0;
