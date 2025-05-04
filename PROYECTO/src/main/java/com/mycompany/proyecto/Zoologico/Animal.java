@@ -3,6 +3,7 @@ package com.mycompany.proyecto.Zoologico;
 
 
 public class Animal {
+   protected  int id;
    protected String Nombre;
    protected double Peso;
    protected int Edad;
@@ -11,7 +12,8 @@ public class Animal {
    protected double Consumo;
    protected String Dieta;
 
-    public Animal(String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+    public Animal(int id,String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        this.id = id;
         this.Nombre = Nombre;
         this.Peso = Peso;
         this.Edad = Edad;

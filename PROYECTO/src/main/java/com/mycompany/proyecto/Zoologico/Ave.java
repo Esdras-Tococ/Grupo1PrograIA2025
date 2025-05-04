@@ -6,8 +6,8 @@ public class Ave extends Animal{
     private boolean Puede_Volar;
     private String Plumas;
 
-    public Ave(boolean Puede_Volar, String Plumas, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
-        super(Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
+    public Ave(int id,boolean Puede_Volar, String Plumas, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        super(id,Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
         this.Puede_Volar = Puede_Volar;
         this.Plumas = Plumas;
     }

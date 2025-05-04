@@ -3,7 +3,7 @@ package com.mycompany.proyecto.Zoologico;
 
 
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 
 
@@ -49,11 +49,11 @@ public class MenuZoo {
                 case 5:
                     System.out.println("Alimentar a los animales :");
                     String animal = scanner.next(); 
-                    Animal Leon = new Mamifero("Carnivoro", "Grueso", "Leon", 15, 5, 6, "MAX", 20, "Carne");
-                    Animal Paloma = new Ave(salir, "Largas", "Paloma", 5, 2, 1, "Grid", 1, "Semillas");
+                    Animal Leon = new Mamifero(1,"Carnivoro", "Grueso", "Leon", 15, 5, 6, "MAX", 20, "Carne");
+                   // Animal Paloma = new Ave(salir, "Largas", "Paloma", 5, 2, 1, "Grid", 1, "Semillas");
                             
                             Leon.Alimentar();
-                            Paloma.Alimentar();
+                        //    Paloma.Alimentar();
                     
                     break;
                 case 6:
@@ -71,11 +71,28 @@ public class MenuZoo {
         scanner.close();
     }   
     
-    public  void registrarAnimales() {
+    public  static void registrarAnimales() {
         Scanner scanner= new Scanner(System.in);
         System.out.println("Registrar una nuevo animal:");
+        int id =0;
+        String nombre="";
+        boolean pass=true;
         
-          String nombre = "";
+        
+        
+        
+            while (pass) {
+            System.out.print("Ingrese el id: ");
+            id =Integer.parseInt( scanner.next());
+            pass = false;
+            if (nombre.trim().isEmpty()) {
+                System.out.println("El nombre no puede estar vacío. Intente de nuevo.");
+            }
+        }
+            
+            
+            
+            
         while (nombre.trim().isEmpty()) {
             System.out.print("Ingrese el nombre del animal: ");
             nombre = scanner.nextLine();
@@ -83,6 +100,9 @@ public class MenuZoo {
                 System.out.println("El nombre no puede estar vacío. Intente de nuevo.");
             }
         }
+        
+        
+        
         double peso = -1;
         while (peso <= 0) {
             System.out.print("Ingrese el peso del animal: ");
@@ -96,6 +116,10 @@ public class MenuZoo {
                 scanner.next();
             }
         }
+        
+        
+        
+        
            String alias = "";
         while (alias.trim().isEmpty()) {
             scanner.nextLine();
@@ -105,7 +129,10 @@ public class MenuZoo {
                 System.out.println("El alias no puede estar vacío. Intente de nuevo.");
             }
         }
-          int edad = -1;
+        
+        
+        
+        int edad = -1;
         while (edad <= 0) {
             System.out.print("Ingrese la edad del animal: ");
             if (scanner.hasNextInt()) {
@@ -118,6 +145,12 @@ public class MenuZoo {
                 scanner.next();
             }
         }
+        
+        
+        
+        
+        
+        
             double altura = -1;
         while (altura <= 0) {
             System.out.print("Ingrese la altura del animal: ");
@@ -132,6 +165,8 @@ public class MenuZoo {
             }
         }
         
+        
+        
         System.out.println("ingrese el consumo de alimento");
         double consumo = scanner.nextInt();
         System.out.println("ingrese la dieta");
@@ -144,13 +179,26 @@ public class MenuZoo {
         System.out.println("Ingrese el tipo de animal: mamifero, ave , reptil\n");
         String tipo = scanner.next();
         Animal animal = null;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         switch (tipo.toLowerCase()) {
             case "mamifero":
                 System.out.println("ingrese la especie");
                 String especie = scanner.next();
                 System.out.println("ingrese el pelaje");
                 String pelaje = scanner.next();
-               animal = new Mamifero(especie, pelaje,nombre, peso, edad, altura, alias,consumo, dieta);
+              // animal = new Mamifero(especie, pelaje,nombre, peso, edad, altura, alias,consumo, dieta);
                 Registros.save(animal.toString());
                 break;
                 case "reptil":
@@ -170,7 +218,7 @@ public class MenuZoo {
                         venenoso = false;
                     }
                     
-                    animal = new Reptil(escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
+                  animal = new Reptil(id,escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
                   Registros.save(animal.toString());
                 break;
                 
@@ -191,7 +239,7 @@ public class MenuZoo {
                     System.out.println("ingrese el tipo de plumas");
                     String plumas = scanner.next();
                     
-                animal = new Ave(volador, plumas,nombre, peso, edad, altura, alias, consumo,dieta);
+               // animal = new Ave(volador, plumas,nombre, peso, edad, altura, alias, consumo,dieta);
                   Registros.save(animal.toString());
                 break;
             default:

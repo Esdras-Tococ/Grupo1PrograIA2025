@@ -8,8 +8,8 @@ public class Mamifero extends Animal{
     private String Especie;
     private String Tipo_Pelaje;
 
-    public Mamifero(String Especie, String Tipo_Pelaje, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
-        super(Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
+    public Mamifero(int id,String Especie, String Tipo_Pelaje, String Nombre, double Peso, int Edad, double Altura, String Alias, double Consumo, String Dieta) {
+        super(id,Nombre, Peso, Edad, Altura, Alias, Consumo, Dieta);
         this.Especie = Especie;
         this.Tipo_Pelaje = Tipo_Pelaje;
     }
