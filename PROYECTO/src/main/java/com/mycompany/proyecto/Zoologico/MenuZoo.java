@@ -9,7 +9,25 @@ import java.util.Scanner;
 
 public class MenuZoo {
   Scanner scanner =new  Scanner(System.in);
-    public  void zoo() {
+
+  boolean a = true;
+   boolean aa = true;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  public  void zoo() {
     
          boolean salir =true;
          int opcion;
@@ -71,31 +89,44 @@ public class MenuZoo {
         scanner.close();
     }   
     
-    public  static void registrarAnimales() {
+  
+  
+  
+  
+    public  void registrarAnimales() {
         Scanner scanner= new Scanner(System.in);
-        System.out.println("Registrar una nuevo animal:");
-        int id =0;
-        String nombre="";
+        
+        
+
+          if (aa) {
+            
+        
+      
+        while (a){
+        
+          
+            
+        
+       
+    
         boolean pass=true;
         
         
         
-        
+         int id =0;
             while (pass) {
             System.out.print("Ingrese el id: ");
             id =Integer.parseInt( scanner.next());
             pass = false;
-            if (nombre.trim().isEmpty()) {
-                System.out.println("El nombre no puede estar vacío. Intente de nuevo.");
-            }
+           
         }
             
             
             
-            
+        String nombre="";
         while (nombre.trim().isEmpty()) {
             System.out.print("Ingrese el nombre del animal: ");
-            nombre = scanner.nextLine();
+            nombre = scanner.next();
             if (nombre.trim().isEmpty()) {
                 System.out.println("El nombre no puede estar vacío. Intente de nuevo.");
             }
@@ -107,7 +138,7 @@ public class MenuZoo {
         while (peso <= 0) {
             System.out.print("Ingrese el peso del animal: ");
             if (scanner.hasNextDouble()) {
-                peso = scanner.nextDouble();
+                peso =Double.parseDouble( scanner.next());
                 if (peso <= 0) {
                     System.out.println("El peso debe ser un número positivo. Intente de nuevo.");
                 }
@@ -124,7 +155,7 @@ public class MenuZoo {
         while (alias.trim().isEmpty()) {
             scanner.nextLine();
             System.out.print("Ingrese el alias del animal: ");
-            alias = scanner.nextLine();
+            alias = scanner.next();
             if (alias.trim().isEmpty()) {
                 System.out.println("El alias no puede estar vacío. Intente de nuevo.");
             }
@@ -136,7 +167,7 @@ public class MenuZoo {
         while (edad <= 0) {
             System.out.print("Ingrese la edad del animal: ");
             if (scanner.hasNextInt()) {
-                edad = scanner.nextInt();
+                edad =Integer.parseInt( scanner.next());
                 if (edad <= 0) {
                     System.out.println("La edad debe ser un número entero positivo. Intente de nuevo.");
                 }
@@ -155,7 +186,7 @@ public class MenuZoo {
         while (altura <= 0) {
             System.out.print("Ingrese la altura del animal: ");
             if (scanner.hasNextDouble()) {
-                altura = scanner.nextDouble();
+                altura = Integer.parseInt(scanner.next());
                 if (altura <= 0) {
                     System.out.println("La altura debe ser un número positivo. Intente de nuevo.");
                 }
@@ -168,7 +199,11 @@ public class MenuZoo {
         
         
         System.out.println("ingrese el consumo de alimento");
-        double consumo = scanner.nextInt();
+        double consumo =Double.parseDouble( scanner.next());
+        
+        
+        
+        
         System.out.println("ingrese la dieta");
         String dieta = scanner.next();
         
@@ -176,7 +211,7 @@ public class MenuZoo {
      
         
         
-        System.out.println("Ingrese el tipo de animal: mamifero, ave , reptil\n");
+        System.out.println("Ingrese el tipo de animal: mamifero, ave , reptil");
         String tipo = scanner.next();
         Animal animal = null;
         
@@ -201,6 +236,11 @@ public class MenuZoo {
               // animal = new Mamifero(especie, pelaje,nombre, peso, edad, altura, alias,consumo, dieta);
                 Registros.save(animal.toString());
                 break;
+                
+                
+                
+                
+                
                 case "reptil":
                     System.out.println("ingrese el tipo de escamas");
                     String escamas = scanner.next();
@@ -209,18 +249,25 @@ public class MenuZoo {
                     boolean venenoso =true;
                     
                     if (opcion==1) {
-                        venenoso = true;
-                        
-                        
-                    }
+                        venenoso = true;}
                     
                     else if (opcion ==0) {
-                        venenoso = false;
-                    }
+                        venenoso = false;}
                     
-                  animal = new Reptil(id,escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
-                  Registros.save(animal.toString());
-                break;
+                    
+                    
+                    
+                    
+                animal = new Reptil(id,escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
+                Registros.save(animal.toString());
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 case"ave" :
                      System.out.println("si puede volar ingrese 1 y 0 si no:");
@@ -247,10 +294,13 @@ public class MenuZoo {
         }
         
         
-        
-        
-        
-        
+     
+}}
+          else{
+          
+              System.out.println("El array esta lleno");
+          }
+       
         
         
       
@@ -298,4 +348,10 @@ public class MenuZoo {
             
         }
     }
+
+
+
+
+
+
 }

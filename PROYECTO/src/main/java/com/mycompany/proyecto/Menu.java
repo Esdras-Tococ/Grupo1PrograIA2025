@@ -4,12 +4,13 @@ package com.mycompany.proyecto;
 
 import java.util.Scanner;
 import com.mycompany.proyecto.Zoologico.MenuZoo;
-
+import com.mycompany.proyecto.Fase2.Menu2;
 
 
 
 public class Menu {
     public static void main(String[] args) {
+          MenuZoo a = new MenuZoo();  
          Scanner scanner= new Scanner(System.in);
          boolean salir =true;
          int opcion;
@@ -31,14 +32,14 @@ public class Menu {
                  switch (opcion){
                
                 case 1:
-                 MenuZoo a = new MenuZoo();       
+                    
                  a.zoo();
                     break;
                 case 2:
-                    System.out.println("Fase II ");
+                   
                     break;
                 case 3:
-                    System.out.println("Fase III");
+                    
                     break;    
                 case 4:
                     System.out.println("!Hasta pronto! gracias por visitar el zoologico:");
