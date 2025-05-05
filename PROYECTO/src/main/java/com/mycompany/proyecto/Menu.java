@@ -4,7 +4,7 @@ package com.mycompany.proyecto;
 
 import java.util.Scanner;
 import com.mycompany.proyecto.Zoologico.MenuZoo;
-import com.mycompany.proyecto.Fase2.Menu2;
+import com.mycompany.proyecto.ModuloFase2.MenuFase2;
 
 
 
@@ -36,7 +36,7 @@ public class Menu {
                  a.zoo();
                     break;
                 case 2:
-                   
+                   MenuFase2.Menu2();
                     break;
                 case 3:
                     

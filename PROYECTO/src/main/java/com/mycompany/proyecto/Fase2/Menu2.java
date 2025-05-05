@@ -1,7 +1,7 @@
 
 package com.mycompany.proyecto.Fase2;
 import com.mycompany.proyecto.Zoologico.MenuZoo;
-import com.mycompany.proyecto.AñadirAnimal;
+import com.mycompany.proyecto.ModuloFase2.AñadirAnimal;
 import java.util.Scanner;
 
 

@@ -1,4 +1,4 @@
-package com.mycompany.proyecto;
+package com.mycompany.proyecto.ModuloFase2;
 
 import com.mycompany.proyecto.Zoologico.Animal;
 import com.mycompany.proyecto.Zoologico.Mamifero;
@@ -6,22 +6,24 @@ import com.mycompany.proyecto.Zoologico.Reptil;
 import com.mycompany.proyecto.Zoologico.Ave;
 import java.util.Scanner;
 
-public class AñadirAnimal {
-  Animal animal;
- Animal[] animales = new Animal[2];
-   int index = 0;
 
-public static void main(String[] args) {
-        AñadirAnimal a = new AñadirAnimal();
-     a.menuAgregar("Ave");
-    }
+public class AñadirAnimal {
+   Animal animal;
+   Animal[] animales = new Animal[10];
+   int index = 0;
+   public static final Scanner sc = new Scanner(System.in);
+   public Animal[] ListaAnimales(){
+   
+   
+   return animales;
+   }
 public void crearReptil() {
     if (!espacio()) {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
         return;
     }
 
-    Scanner sc = new Scanner(System.in);
+
 
     int id;
     while (true) {

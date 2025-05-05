@@ -1,0 +1,68 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.proyecto.ModuloFase2;
+
+import static com.mycompany.proyecto.ModuloFase2.AñadirAnimal.sc;
+
+/**
+ *
+ * @author Jovany
+ */
+public class MenuFase2 {
+    public static void Menu2() {
+     AñadirAnimal a = new AñadirAnimal();
+     
+     
+     int opcion =0;
+
+        do {
+            System.out.println("===== MENU DE ANIMALES =====");
+            System.out.println("1: Agregar Mamifero");
+            System.out.println("2: Agregar Ave");
+            System.out.println("3: Agregar Reptil");
+            System.out.println("4: Ordenar Arreglo (alfabéticamente)");
+            System.out.println("5: Mostrar Arreglo");
+            System.out.println("6: Salir");
+           
+            String user = sc.next();
+            try {
+                opcion = Integer.parseInt(user);
+                
+            } catch (Exception e) {
+                System.out.println("Opcion invalida ");
+                break;
+            }
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("en proceso.........");
+                    break;
+                case 2:
+                     a.menuAgregar("Ave");
+                    break;
+                case 3:
+                    a.menuAgregar("Reptil");
+                    break;
+                case 4:
+                    System.out.println("en proceso..........");
+                
+                    break;
+                case 5:
+                  System.out.println("en proceso..........");
+                    break;
+                case 6:
+                    
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intenta de nuevo.");
+            }
+        } while (opcion != 'f');
+    
+     
+     
+     
+     
+    }
+}
