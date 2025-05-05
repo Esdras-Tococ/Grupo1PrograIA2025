@@ -26,4 +26,8 @@ public class Animal {
    public void Alimentar(){
        System.out.println("Se Alimenta el");
    } 
+   public int getId() {
+    return this.id;
+}
+
 }
