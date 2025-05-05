@@ -1,18 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.proyecto.ModuloFase2;
 
 import static com.mycompany.proyecto.ModuloFase2.AñadirAnimal.sc;
 
-/**
- *
- * @author Jovany
- */
+
 public class MenuFase2 {
     public static void Menu2() {
-     AñadirAnimal a = new AñadirAnimal();
+     AñadirAnimal AddAnimal = new AñadirAnimal();
      
      
      int opcion =0;
@@ -40,10 +34,10 @@ public class MenuFase2 {
                     System.out.println("en proceso.........");
                     break;
                 case 2:
-                     a.menuAgregar("Ave");
+                     AddAnimal.menuAgregar("Ave");
                     break;
                 case 3:
-                    a.menuAgregar("Reptil");
+                    AddAnimal.menuAgregar("Reptil");
                     break;
                 case 4:
                     System.out.println("en proceso..........");
@@ -58,7 +52,7 @@ public class MenuFase2 {
                 default:
                     System.out.println("Opción inválida. Intenta de nuevo.");
             }
-        } while (opcion != 'f');
+        } while (opcion != 6);
     
      
      

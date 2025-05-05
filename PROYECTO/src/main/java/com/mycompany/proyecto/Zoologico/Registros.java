@@ -54,8 +54,8 @@ public class Registros {
         String archivoCSV="Data.txt";
         String datos7= datos.toLowerCase();
         try (PrintWriter writer = new PrintWriter(new FileWriter(archivoCSV,StandardCharsets.UTF_8, true))) {
-        long ID = Files.lines(Paths.get(archivoCSV)).count();
-            writer.println(ID+","+datos7);
+      //  long ID = Files.lines(Paths.get(archivoCSV)).count();
+            writer.println(datos7);
         } catch (IOException e) {
             System.out.println("Error al escribir en el archivo ");
         }

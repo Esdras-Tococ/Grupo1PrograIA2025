@@ -90,7 +90,7 @@ public class Mamifero extends Animal{
    
     @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+","+Consumo+","+Dieta+","+Especie+","+Tipo_Pelaje;
+    return id+","+Nombre+", "+Peso+", "+Altura+" ,"+Edad+","+Alias+","+Consumo+","+Dieta+","+Especie+","+Tipo_Pelaje;
     };
 
     @Override

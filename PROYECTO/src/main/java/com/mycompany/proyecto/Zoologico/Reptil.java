@@ -86,7 +86,7 @@ public class Reptil extends Animal{
     
   @Override
     public String toString(){
-    return Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Alias+","+Consumo+","+Dieta+","+Tipo_Escamas+", "+es_Venenoso ;
+    return id+","+Nombre+", "+Peso+", "+Altura+" ,"+Edad+", "+Alias+","+Consumo+","+Dieta+","+Tipo_Escamas+", "+es_Venenoso ;
     }; 
 
     @Override

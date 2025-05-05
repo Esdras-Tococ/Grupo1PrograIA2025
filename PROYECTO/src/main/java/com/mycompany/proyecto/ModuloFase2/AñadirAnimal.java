@@ -4,8 +4,11 @@ import com.mycompany.proyecto.Zoologico.Animal;
 import com.mycompany.proyecto.Zoologico.Mamifero;
 import com.mycompany.proyecto.Zoologico.Reptil;
 import com.mycompany.proyecto.Zoologico.Ave;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
-
+import com.mycompany.proyecto.Zoologico.Registros;
 
 public class AñadirAnimal {
    Animal animal;
@@ -13,8 +16,6 @@ public class AñadirAnimal {
    int index = 0;
    public static final Scanner sc = new Scanner(System.in);
    public Animal[] ListaAnimales(){
-   
-   
    return animales;
    }
 public void crearReptil() {
@@ -29,7 +30,16 @@ public void crearReptil() {
     while (true) {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
-
+    
+    
+        if (BusquedaIdData(id)) {
+             System.out.println("Ese ID ya está en uso. Ingrese otro.");
+        }
+        else{
+            
+            break;}
+        
+        
     if (BusquedaId(id)) {
         System.out.println("Ese ID ya está en uso. Ingrese otro.");
     } 
@@ -68,7 +78,7 @@ public void crearReptil() {
             "¿Es venenoso? (si/no):");
 
     animal = new Reptil(id, escamas, veneno, nombre, peso, edad, altura, alias, consumo, dieta);
-
+     Registros.save(animal.toString());
     animales[index++] = animal;
     }
 public void crearAve() {
@@ -83,7 +93,12 @@ public void crearAve() {
     while (true) {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
-
+  if (BusquedaIdData(id)) {
+             System.out.println("Ese ID ya está en uso. Ingrese otro.");
+        }
+        else{
+            
+            break;}
     if (BusquedaId(id)) {
         System.out.println("Ese ID ya está en uso. Ingrese otro.");
     } 
@@ -172,6 +187,30 @@ public void menuAgregar(String animal) {
         }
     }
 }
+
+
+
+
+public boolean BusquedaIdData(int id){
+ try {
+            BufferedReader lector = new BufferedReader(new FileReader("Data.txt"));
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+               String[] lista = linea.split(",");
+               int DataId = Integer.parseInt(lista[0]);
+                if (DataId==id) {
+                   // System.out.println(lista[0]);
+                   return true;
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+ 
+ return false;
+ 
+}
 public boolean BusquedaId(int id) {
     for (int i = 0; i < index; i++) {
         if (animales[i].getId() == id) {
@@ -180,9 +219,6 @@ public boolean BusquedaId(int id) {
     }
     return false;
 }
-
-
-
 public void crearMamifero() {
     if (!espacio()) {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
