@@ -22,7 +22,7 @@ public class MenuFase2 {
             System.out.println("1: Agregar Mamifero");
             System.out.println("2: Agregar Ave");
             System.out.println("3: Agregar Reptil");
-            System.out.println("4: Ordenar Arreglo (alfabéticamente)");
+            System.out.println("4: Ordenar Arreglo");
             System.out.println("5: Mostrar Arreglo");
             System.out.println("6: Salir");
            
