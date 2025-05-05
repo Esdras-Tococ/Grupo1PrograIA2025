@@ -1,12 +1,14 @@
 
 package com.mycompany.proyecto.Fase2;
+import com.mycompany.proyecto.Zoologico.MenuZoo;
+import com.mycompany.proyecto.AñadirAnimal;
 import java.util.Scanner;
-import  com.mycompany.proyecto.Zoologico.MenuZoo;
 
 
 public class Menu2 {
     public static void main(String[] args) {
-          MenuZoo a = new MenuZoo();  
+          MenuZoo a = new MenuZoo(); 
+          AñadirAnimal c = new AñadirAnimal();
          Scanner scanner= new Scanner(System.in);
          boolean salir =true;
          int opcion;
@@ -15,7 +17,7 @@ public class Menu2 {
         
         while (salir){  
             System.out.println("\nMenu:");
-            System.out.println("Elige una opcion:");
+            System.out.println("Elige una Opcion:");
             System.out.println("Opcion 1: Agregar Mamifero");
             System.out.println("Opcion 2: Agregar Ave");
             System.out.println("Opcion 3: Agregar Reptil");

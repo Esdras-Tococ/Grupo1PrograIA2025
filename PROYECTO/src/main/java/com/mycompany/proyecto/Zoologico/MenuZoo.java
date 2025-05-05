@@ -233,7 +233,7 @@ public class MenuZoo {
                 String especie = scanner.next();
                 System.out.println("ingrese el pelaje");
                 String pelaje = scanner.next();
-              // animal = new Mamifero(especie, pelaje,nombre, peso, edad, altura, alias,consumo, dieta);
+                animal = new Mamifero(id, especie, pelaje,nombre, peso, edad, altura, alias,consumo, dieta);
                 Registros.save(animal.toString());
                 break;
                 
@@ -258,7 +258,7 @@ public class MenuZoo {
                     
                     
                     
-                animal = new Reptil(id,escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
+                animal = new Reptil(id, escamas, venenoso, nombre, peso, edad, altura, alias, consumo,dieta);
                 Registros.save(animal.toString());
                 
                 
@@ -286,7 +286,7 @@ public class MenuZoo {
                     System.out.println("ingrese el tipo de plumas");
                     String plumas = scanner.next();
                     
-               // animal = new Ave(volador, plumas,nombre, peso, edad, altura, alias, consumo,dieta);
+                animal = new Ave(id, volador, plumas,nombre, peso, edad, altura, alias, consumo,dieta);
                   Registros.save(animal.toString());
                 break;
             default:
