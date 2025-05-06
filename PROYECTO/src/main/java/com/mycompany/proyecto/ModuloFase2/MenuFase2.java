@@ -31,7 +31,7 @@ public class MenuFase2 {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("en proceso.........");
+                        AddAnimal.menuAgregar("Mamifero");
                     break;
                 case 2:
                      AddAnimal.menuAgregar("Ave");
