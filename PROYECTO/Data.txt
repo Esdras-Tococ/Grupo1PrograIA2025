@@ -1,3 +1,5 @@
 7,7, 7.0, 7.0 ,7,7,7.0,7,false, 7
 77,77, 77.0, 77.0 ,77,77,77.0,77,false, 7
 12,1, 1.0, 1.0 ,1, 1,1.0,1,1, false
+1,halcon, 5.0, 40.0 ,3,insectos,10.0,gris,true, robustas
+2,halcon, 5.0, 50.0 ,4,insectos,30.0,lux,true, espesas
