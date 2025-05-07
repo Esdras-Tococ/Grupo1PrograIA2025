@@ -32,21 +32,19 @@ public void crearReptil() {
     id = Integer.parseInt(sc.next());
     
     
-        if (BusquedaIdData(id)&&BusquedaId(id)) {
-             System.out.println("Ese ID ya está en uso. Ingrese otro.");
-        }
-        else{
+          if (BusquedaIdData(id)||BusquedaId(id)) {
+         
+                   System.out.println("Ese ID ya está en uso. Ingrese otro.");
             
-            break;}
+     
         
-        
-    if (BusquedaId(id)) {
-        System.out.println("Ese ID ya está en uso. Ingrese otro.");
     } 
-    else {
+           
+            
         
-        break;
-    }
+  else{break;
+  
+  }
 }
 
 
@@ -95,9 +93,9 @@ public void crearAve() {
     System.out.println("Ingrese id:");
     
     id = Integer.parseInt(sc.next());
-       // System.out.println(BusquedaIdData(id));
+      
 
-        if (BusquedaIdData(id)) {
+        if (BusquedaIdData(id)||BusquedaId(id)) {
          
                    System.out.println("Ese ID ya está en uso. Ingrese otro.");
             
