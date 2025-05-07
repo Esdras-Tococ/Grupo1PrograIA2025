@@ -32,7 +32,7 @@ public void crearReptil() {
     id = Integer.parseInt(sc.next());
     
     
-        if (BusquedaIdData(id)) {
+        if (BusquedaIdData(id)&&BusquedaId(id)) {
              System.out.println("Ese ID ya está en uso. Ingrese otro.");
         }
         else{
@@ -78,10 +78,11 @@ public void crearReptil() {
             "¿Es venenoso? (si/no):");
 
     animal = new Reptil(id, escamas, veneno, nombre, peso, edad, altura, alias, consumo, dieta);
-     Registros.save(animal.toString());
+    
     animales[index++] = animal;
     }
 public void crearAve() {
+    
     if (!espacio()) {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
         return;
@@ -92,20 +93,28 @@ public void crearAve() {
     int id;
     while (true) {
     System.out.println("Ingrese id:");
+    
     id = Integer.parseInt(sc.next());
-  if (BusquedaIdData(id)) {
-             System.out.println("Ese ID ya está en uso. Ingrese otro.");
-        }
-        else{
+       // System.out.println(BusquedaIdData(id));
+
+        if (BusquedaIdData(id)) {
+         
+                   System.out.println("Ese ID ya está en uso. Ingrese otro.");
             
-            break;}
-    if (BusquedaId(id)) {
-        System.out.println("Ese ID ya está en uso. Ingrese otro.");
-    } 
-    else {
+     
         
-        break;
-    }
+    } 
+           
+            
+        
+  else{break;
+  
+  }
+        
+ 
+   
+   
+  
 }
 
 
@@ -145,7 +154,7 @@ private boolean leerboolean(String mensaje) {
             System.out.println(mensaje);
             String entrada = sc.next().toLowerCase();
             if (entrada.equals("si")) return true;
-            if (entrada.equals("no")) return false;
+            if (entrada .equals("no")) return false;
             System.out.println("Por favor, ingrese 'si' o 'no'.");
         }
     }
@@ -183,6 +192,12 @@ public void menuAgregar(String animal) {
         }
 
         if (respuesta.equals("no")) {
+            
+            for (Animal animale : animales) {
+                 Registros.save(animale.toString());
+                
+            }
+            
             break;
         }
     }
@@ -199,7 +214,7 @@ public boolean BusquedaIdData(int id){
                String[] lista = linea.split(",");
                int DataId = Integer.parseInt(lista[0]);
                 if (DataId==id) {
-                   // System.out.println(lista[0]);
+                   // System.out.println(DataId);
                    return true;
                 }
             }
