@@ -42,7 +42,7 @@ public class MenuFase2 {
                     AddAnimal.menuAgregar("Reptil");
                     break;
                 case 4:
-                    System.out.println("en proceso..........");
+                    AddAnimal.ListaAnimales();
                 
                     break;
                 case 5:
