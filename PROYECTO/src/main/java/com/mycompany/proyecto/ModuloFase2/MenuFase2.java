@@ -5,6 +5,8 @@ import static com.mycompany.proyecto.ModuloFase2.AñadirAnimal.sc;
 
 
 public class MenuFase2 {
+    
+    
     public static void Menu2() {
      AñadirAnimal AddAnimal = new AñadirAnimal();
      

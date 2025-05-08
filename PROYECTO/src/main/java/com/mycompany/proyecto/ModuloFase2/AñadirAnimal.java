@@ -256,12 +256,7 @@ public void menuAgregar(String animal) {
         }
     }
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 85a779641fae83e75363ecb4bd55d95b3856e713
 public boolean BusquedaIdData(int id){
  try {
             BufferedReader lector = new BufferedReader(new FileReader("Data.txt"));
