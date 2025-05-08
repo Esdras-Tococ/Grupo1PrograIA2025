@@ -7,7 +7,6 @@ import com.mycompany.proyecto.Zoologico.MenuZoo;
 import com.mycompany.proyecto.ModuloFase2.MenuFase2;
 
 
-
 public class Menu {
     public static void main(String[] args) {
           MenuZoo a = new MenuZoo();  
@@ -50,8 +49,7 @@ public class Menu {
                  }
                 
             } catch (Exception e) {
-                System.err.println("ingrese una opcion validad:.");
-                System.err.println("por fvor, selecione una opcion del menu:");
+                System.out.println(e);
             }
            
         }
