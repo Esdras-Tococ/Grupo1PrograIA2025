@@ -142,6 +142,61 @@ public void crearAve() {
 
     animales[index++] = animal;
     }
+
+public void crearMamifero() {
+    if (!espacio()) {
+        System.out.println("No se puede agregar más animales. El zoológico está lleno.");
+        return;
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    int id;
+    while (true) {
+    System.out.println("Ingrese id:");
+    id = Integer.parseInt(sc.next());
+
+    if (BusquedaId(id)) {
+        System.out.println("Ese ID ya está en uso. Ingrese otro.");
+    } 
+    else {
+        
+        break;
+    }
+}
+    System.out.println("Ingrese nombre:");
+    String nombre = sc.next();
+
+    System.out.println("Ingrese peso:");
+    double peso = Double.parseDouble(sc.next());
+
+    System.out.println("Ingrese edad:");
+    int edad = Integer.parseInt(sc.next());
+
+    System.out.println("Ingrese altura:");
+    double altura = Double.parseDouble(sc.next());
+
+    System.out.println("Ingrese alias:");
+    String alias = sc.next();
+
+    System.out.println("Ingrese consumo:");
+    double consumo = Double.parseDouble(sc.next());
+
+    System.out.println("Ingrese dieta:");
+    String dieta = sc.next();
+
+    System.out.println("Ingrese la Especie:");
+    String especie = sc.next();
+
+    System.out.println("Ingrese el tipo de Pelaje:");
+    String pelaje = sc.next();
+
+    animal = new Mamifero(id, especie, pelaje, nombre, peso, edad, altura, alias, consumo, dieta);
+
+    animales[index++] = animal;
+    }
+
+
 private boolean leerboolean(String mensaje) {
         Scanner sc = new Scanner(System.in);
         while (true) {
@@ -201,6 +256,12 @@ public void menuAgregar(String animal) {
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 85a779641fae83e75363ecb4bd55d95b3856e713
 public boolean BusquedaIdData(int id){
  try {
             BufferedReader lector = new BufferedReader(new FileReader("Data.txt"));
@@ -228,61 +289,5 @@ public boolean BusquedaId(int id) {
         }
     }
     return false;
-}
-public void crearMamifero() {
-    if (!espacio()) {
-        System.out.println("No se puede agregar más animales. El zoológico está lleno.");
-        return;
     }
-
-    Scanner sc = new Scanner(System.in);
-
-    int id;
-    while (true) {
-    System.out.println("Ingrese id:");
-    id = Integer.parseInt(sc.next());
-
-    if (BusquedaId(id)) {
-        System.out.println("Ese ID ya está en uso. Ingrese otro.");
-    } 
-    else {
-        
-        break;
-    }
-}
-
-
-    System.out.println("Ingrese nombre:");
-    String nombre = sc.next();
-
-    System.out.println("Ingrese peso:");
-    double peso = Double.parseDouble(sc.next());
-
-    System.out.println("Ingrese edad:");
-    int edad = Integer.parseInt(sc.next());
-
-    System.out.println("Ingrese altura:");
-    double altura = Double.parseDouble(sc.next());
-
-    System.out.println("Ingrese alias:");
-    String alias = sc.next();
-
-    System.out.println("Ingrese consumo:");
-    double consumo = Double.parseDouble(sc.next());
-
-    System.out.println("Ingrese dieta:");
-    String dieta = sc.next();
-
-    System.out.println("Ingrese la Especie:");
-    String especie = sc.next();
-
-    System.out.println("Ingrese el tipo de Pelaje:");
-    String pelaje = sc.next();
-
-    animal = new Mamifero(id, especie, pelaje, nombre, peso, edad, altura, alias, consumo, dieta);
-
-    animales[index++] = animal;
-    }
-
-
 }
