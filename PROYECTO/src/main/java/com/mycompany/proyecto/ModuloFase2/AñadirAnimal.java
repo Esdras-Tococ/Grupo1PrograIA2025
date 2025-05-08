@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 import com.mycompany.proyecto.Zoologico.Registros;
-
 public class AñadirAnimal {
    Animal animal;
    Animal[] animales = new Animal[10];
@@ -23,9 +22,6 @@ public void crearReptil() {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
         return;
     }
-
-
-
     int id;
     while (true) {
     System.out.println("Ingrese id:");
@@ -158,7 +154,7 @@ private boolean leerboolean(String mensaje) {
     }
 public boolean espacio() {return index < animales.length;}
 public void menuAgregar(String animal) {
-    Scanner sc = new Scanner(System.in);
+   // Scanner sc = new Scanner(System.in);
     while (true) {
         if (!espacio()) {
             System.out.println("Ya no hay espacio para más animales.\n");
@@ -190,20 +186,21 @@ public void menuAgregar(String animal) {
         }
 
         if (respuesta.equals("no")) {
-            
-            for (Animal animale : animales) {
-                 Registros.save(animale.toString());
+          
+                 for (Animal animale : animales) {
+                     if (animale!=null) {
+                            Registros.save(animale.toString());
+                     }
+              
                 
-            }
             
-            break;
+            }
+           
+              break;
+          
         }
     }
 }
-
-
-
-
 public boolean BusquedaIdData(int id){
  try {
             BufferedReader lector = new BufferedReader(new FileReader("Data.txt"));
