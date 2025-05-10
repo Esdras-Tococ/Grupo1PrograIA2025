@@ -18,41 +18,61 @@ public class AñadirAnimal {
    return animales;
    }
 public void crearReptil() {
+   
     if (!espacio()) {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
-        return;
-    }
+        return;}
+    
     int id;
+    String nombre;
+    double peso;
+    
+    
     while (true) {
+    try {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
+    if (BusquedaId(id)) {  
+    System.out.println("Ese ID ya está en uso. Ingrese otro."); }     
+    else{break;}
+   break;
+} catch (Exception e) {
+        System.out.println("Ingrese un dato valido");
+        }
+        
+        }
+
     
     
-          if (BusquedaIdData(id)||BusquedaId(id)) {
-         
-                   System.out.println("Ese ID ya está en uso. Ingrese otro.");
-            
-     
         
-    } 
-           
-            
-        
-  else{break;
+   
+          System.out.println("Ingrese nombre:");
+    nombre = sc.next();
   
-  }
-}
+            
 
 
-    System.out.println("Ingrese nombre:");
-    String nombre = sc.next();
 
+   
+ while (true) {  
+        try {
     System.out.println("Ingrese peso:");
-    double peso = Double.parseDouble(sc.next());
-
+    peso = Double.parseDouble(sc.next());
+    break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+ 
+  while (true) {  
+        try {
     System.out.println("Ingrese edad:");
     int edad = Integer.parseInt(sc.next());
-
+  break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
     System.out.println("Ingrese altura:");
     double altura = Double.parseDouble(sc.next());
 
@@ -79,19 +99,16 @@ public void crearAve() {
     
     if (!espacio()) {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
-        return;
-    }
-
-    Scanner sc = new Scanner(System.in);
-
-    int id;
-    while (true) {
-    System.out.println("Ingrese id:");
+        return;}
     
+    
+    int id;
+    while (true) 
+    {
+    System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
-      
 
-        if (BusquedaIdData(id)||BusquedaId(id)) {
+        if (BusquedaId(id)) {
          
                    System.out.println("Ese ID ya está en uso. Ingrese otro.");
             

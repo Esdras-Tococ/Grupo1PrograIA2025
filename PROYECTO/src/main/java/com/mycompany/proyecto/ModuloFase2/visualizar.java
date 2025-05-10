@@ -18,7 +18,7 @@ import java.util.Comparator;
 public class visualizar {
     
     
-    public void listaAnimales(Animal[] animales) {
+    public static void listaAnimales(Animal[] animales) {
         if (animales == null || animales.length == 0) {
             System.out.println("No hay animales para mostrar.");
             return;

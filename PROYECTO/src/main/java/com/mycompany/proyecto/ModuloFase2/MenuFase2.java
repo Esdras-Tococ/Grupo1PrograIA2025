@@ -2,6 +2,7 @@
 package com.mycompany.proyecto.ModuloFase2;
 
 import static com.mycompany.proyecto.ModuloFase2.AñadirAnimal.sc;
+import com.mycompany.proyecto.Zoologico.Animal;
 
 
 public class MenuFase2 {
@@ -10,7 +11,7 @@ public class MenuFase2 {
     public static void Menu2() {
      AñadirAnimal AddAnimal = new AñadirAnimal();
      
-     
+    
      int opcion =0;
 
         do {
@@ -30,7 +31,9 @@ public class MenuFase2 {
                 System.out.println("Opcion invalida ");
                 break;
             }
-
+            try {
+                
+           
             switch (opcion) {
                 case 1:
                         AddAnimal.menuAgregar("Mamifero");
@@ -42,7 +45,7 @@ public class MenuFase2 {
                     AddAnimal.menuAgregar("Reptil");
                     break;
                 case 4:
-                    AddAnimal.ListaAnimales();
+                   visualizar.listaAnimales(AddAnimal.ListaAnimales());
                 
                     break;
                 case 5:
@@ -53,6 +56,10 @@ public class MenuFase2 {
                     break;
                 default:
                     System.out.println("Opción inválida. Intenta de nuevo.");
+            }
+            
+            
+             } catch (Exception e) {
             }
         } while (opcion != 6);
     
