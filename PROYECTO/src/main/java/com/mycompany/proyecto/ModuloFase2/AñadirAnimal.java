@@ -17,6 +17,10 @@ public class AñadirAnimal {
    public Animal[] ListaAnimales(){
    return animales;
    }
+   public void crearAnimal(){
+   
+   
+   }
 public void crearReptil() {
    
     if (!espacio()) {
@@ -26,7 +30,9 @@ public void crearReptil() {
     int id;
     String nombre;
     double peso;
-    
+    double altura;
+    int edad;
+    double consumo;
     
     while (true) {
     try {
@@ -36,24 +42,13 @@ public void crearReptil() {
     System.out.println("Ese ID ya está en uso. Ingrese otro."); }     
     else{break;}
    break;
-} catch (Exception e) {
+    } catch (Exception e) {
         System.out.println("Ingrese un dato valido");
         }
         
         }
-
-    
-    
-        
-   
-          System.out.println("Ingrese nombre:");
+    System.out.println("Ingrese nombre:");
     nombre = sc.next();
-  
-            
-
-
-
-   
  while (true) {  
         try {
     System.out.println("Ingrese peso:");
@@ -67,21 +62,38 @@ public void crearReptil() {
   while (true) {  
         try {
     System.out.println("Ingrese edad:");
-    int edad = Integer.parseInt(sc.next());
+     edad = Integer.parseInt(sc.next());
   break;
     } catch (Exception e) {
     System.out.println("Ingrese un dato valido");
         }
     }
+  
+  
+    while (true) {  
+        try {
     System.out.println("Ingrese altura:");
-    double altura = Double.parseDouble(sc.next());
-
+    altura = Double.parseDouble(sc.next());
+  break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+    
+    
     System.out.println("Ingrese alias:");
     String alias = sc.next();
-
+ while (true) {  
+        try {
     System.out.println("Ingrese consumo:");
-    double consumo = Double.parseDouble(sc.next());
-
+     consumo = Double.parseDouble(sc.next());
+ break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+ 
+ 
     System.out.println("Ingrese dieta:");
     String dieta = sc.next();
 
@@ -103,53 +115,75 @@ public void crearAve() {
     
     
     int id;
-    while (true) 
-    {
+    String nombre;
+    double peso;
+    double altura;
+    int edad;
+    double consumo;
+    
+    while (true) {
+    try {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
-
-        if (BusquedaId(id)) {
-         
-                   System.out.println("Ese ID ya está en uso. Ingrese otro.");
-            
-     
+    if (BusquedaId(id)) {  
+    System.out.println("Ese ID ya está en uso. Ingrese otro."); }     
+    else{break;}
+   break;
+    } catch (Exception e) {
+        System.out.println("Ingrese un dato valido");
+        }
         
-    } 
-           
-            
-        
-  else{break;
-  
-  }
-        
- 
-   
-   
-  
-}
-
-
+        }
     System.out.println("Ingrese nombre:");
-    String nombre = sc.next();
-
+    nombre = sc.next();
+ while (true) {  
+        try {
     System.out.println("Ingrese peso:");
-    double peso = Double.parseDouble(sc.next());
-
+    peso = Double.parseDouble(sc.next());
+    break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+ 
+  while (true) {  
+        try {
     System.out.println("Ingrese edad:");
-    int edad = Integer.parseInt(sc.next());
-
+     edad = Integer.parseInt(sc.next());
+  break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+  
+  
+    while (true) {  
+        try {
     System.out.println("Ingrese altura:");
-    double altura = Double.parseDouble(sc.next());
-
+    altura = Double.parseDouble(sc.next());
+  break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+    
+    
     System.out.println("Ingrese alias:");
     String alias = sc.next();
-
+ while (true) {  
+        try {
     System.out.println("Ingrese consumo:");
-    double consumo = Double.parseDouble(sc.next());
-
+     consumo = Double.parseDouble(sc.next());
+ break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+ 
+ 
     System.out.println("Ingrese dieta:");
     String dieta = sc.next();
-
+    
     System.out.println("Ingrese el tipo de Plumas:");
     String plumas = sc.next();
 
