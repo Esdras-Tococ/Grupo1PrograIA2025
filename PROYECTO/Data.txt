@@ -1,0 +1,2 @@
+1,leon, 50.0, 50.0 ,3,max,50.0,carne,felino,grueso
+2,perro, 10.0, 20.0 ,2,toby,2.0,concentrado,canino,esponjoso

@@ -206,45 +206,86 @@ public void crearAve() {
     animales[index++] = animal;
     }
 
+
+
 public void crearMamifero() {
+    
     if (!espacio()) {
         System.out.println("No se puede agregar más animales. El zoológico está lleno.");
-        return;
-    }
-
-    Scanner sc = new Scanner(System.in);
-
+        return;}
+    
+    
     int id;
-    while (true) {
+    String nombre;
+    double peso;
+    double altura;
+    int edad;
+    double consumo;
+    
+  while (true) {
+    try {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
-
-    if (BusquedaId(id)) {
-        System.out.println("Ese ID ya está en uso. Ingrese otro.");
-    } 
-    else {
-        
+    
+    if (BusquedaId(id)) {  
+    System.out.println("Ese ID ya está en uso. Ingrese otro."); 
+   
+    }     
+    else{
         break;
+    
     }
-}
+ 
+    } catch (Exception e) {
+        System.out.println("Ingrese un dato valido");
+        }
+        
+        }
     System.out.println("Ingrese nombre:");
-    String nombre = sc.next();
-
+    nombre = sc.next();
+ while (true) {  
+        try {
     System.out.println("Ingrese peso:");
-    double peso = Double.parseDouble(sc.next());
-
+    peso = Double.parseDouble(sc.next());
+    break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+ 
+  while (true) {  
+        try {
     System.out.println("Ingrese edad:");
-    int edad = Integer.parseInt(sc.next());
-
+     edad = Integer.parseInt(sc.next());
+  break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+  
+  
+    while (true) {  
+        try {
     System.out.println("Ingrese altura:");
-    double altura = Double.parseDouble(sc.next());
-
+    altura = Double.parseDouble(sc.next());
+  break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
+    
+    
     System.out.println("Ingrese alias:");
     String alias = sc.next();
-
+ while (true) {  
+        try {
     System.out.println("Ingrese consumo:");
-    double consumo = Double.parseDouble(sc.next());
-
+     consumo = Double.parseDouble(sc.next());
+ break;
+    } catch (Exception e) {
+    System.out.println("Ingrese un dato valido");
+        }
+    }
     System.out.println("Ingrese dieta:");
     String dieta = sc.next();
 
@@ -258,7 +299,6 @@ public void crearMamifero() {
 
     animales[index++] = animal;
     }
-
 
 private boolean leerboolean(String mensaje) {
         Scanner sc = new Scanner(System.in);
