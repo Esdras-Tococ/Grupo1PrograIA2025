@@ -38,10 +38,16 @@ public void crearReptil() {
     try {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
+    
     if (BusquedaId(id)) {  
-    System.out.println("Ese ID ya está en uso. Ingrese otro."); }     
-    else{break;}
-   break;
+    System.out.println("Ese ID ya está en uso. Ingrese otro."); 
+   
+    }     
+    else{
+        break;
+    
+    }
+ 
     } catch (Exception e) {
         System.out.println("Ingrese un dato valido");
         }
@@ -121,14 +127,20 @@ public void crearAve() {
     int edad;
     double consumo;
     
-    while (true) {
+  while (true) {
     try {
     System.out.println("Ingrese id:");
     id = Integer.parseInt(sc.next());
+    
     if (BusquedaId(id)) {  
-    System.out.println("Ese ID ya está en uso. Ingrese otro."); }     
-    else{break;}
-   break;
+    System.out.println("Ese ID ya está en uso. Ingrese otro."); 
+   
+    }     
+    else{
+        break;
+    
+    }
+ 
     } catch (Exception e) {
         System.out.println("Ingrese un dato valido");
         }
