@@ -20,7 +20,7 @@ public class Menu {
             System.out.println("\nMenù:");
             System.out.println("Elige una opcion:");
             System.out.println("opcion 1.Zoologico:");
-            System.out.println("opcion 2.Fase II:");
+            System.out.println("opcion 2.REGISTRO DE ANIMALES");
             System.out.println("opcion 3.Fase III:");
             System.out.println("opcion 4.Salir: ");
             opcion =scanner.nextInt();

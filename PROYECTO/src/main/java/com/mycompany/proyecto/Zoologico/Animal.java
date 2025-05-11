@@ -23,6 +23,34 @@ public class Animal {
         this.Dieta = Dieta;
     
     }   
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public double getPeso() {
+        return Peso;
+    }
+
+    public int getEdad() {
+        return Edad;
+    }
+
+    public double getAltura() {
+        return Altura;
+    }
+
+    public String getAlias() {
+        return Alias;
+    }
+
+    public double getConsumo() {
+        return Consumo;
+    }
+
+    public String getDieta() {
+        return Dieta;
+    }
    public void Alimentar(){
        System.out.println("Se Alimenta el");
    } 

@@ -2,7 +2,7 @@
 package com.mycompany.proyecto.ModuloFase2;
 
 import static com.mycompany.proyecto.ModuloFase2.AñadirAnimal.sc;
-import com.mycompany.proyecto.Zoologico.Animal;
+import com.mycompany.proyecto.ModuloFase2.Mostrar;
 
 
 public class MenuFase2 {
@@ -49,7 +49,8 @@ public class MenuFase2 {
                 
                     break;
                 case 5:
-                  System.out.println("en proceso..........");
+                      Mostrar.imprimir(AddAnimal.ListaAnimales(), opcion);
+                  
                     break;
                 case 6:
                     

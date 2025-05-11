@@ -91,7 +91,7 @@ public void crearReptil() {
     String alias = sc.next();
  while (true) {  
         try {
-    System.out.println("Ingrese consumo:");
+    System.out.println("Ingrese la cantidad de  consumo:");
      consumo = Double.parseDouble(sc.next());
  break;
     } catch (Exception e) {
@@ -184,7 +184,7 @@ public void crearAve() {
     String alias = sc.next();
  while (true) {  
         try {
-    System.out.println("Ingrese consumo:");
+    System.out.println("Ingrese la cantidad de consumo:");
      consumo = Double.parseDouble(sc.next());
  break;
     } catch (Exception e) {
@@ -279,7 +279,7 @@ public void crearMamifero() {
     String alias = sc.next();
  while (true) {  
         try {
-    System.out.println("Ingrese consumo:");
+    System.out.println("Ingrese la cantidad de consumo:");
      consumo = Double.parseDouble(sc.next());
  break;
     } catch (Exception e) {
