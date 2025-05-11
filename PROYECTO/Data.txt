@@ -2,3 +2,5 @@
 2,perro, 10.0, 20.0 ,2,toby,2.0,concentrado,canino,esponjoso
 6,gato, 5.0, 5.0 ,5,michi,3.0,ratones,felino,peludo
 5,perro, 2.0, 5.0 ,5,firu,5.0,consentrado,mamifero,liso
+1,leon, 50.0, 10.0 ,5,max,50.0,carne,felino,grueso
+2,perro, 20.0, 20.0 ,2,toby,20.0,croquetas,canino,suave
