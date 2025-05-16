@@ -4,6 +4,7 @@ com\mycompany\proyecto\Zoologico\Ave.class
 com\mycompany\proyecto\ModuloFase2\visualizar$1.class
 com\mycompany\proyecto\Zoologico\Registros.class
 com\mycompany\proyecto\Zoologico\Reptil.class
+com\mycompany\proyecto\ModuloFase2\BaseDeDatos.class
 com\mycompany\proyecto\Zoologico\Animal.class
 com\mycompany\proyecto\ModuloFase2\Mostrar.class
 com\mycompany\proyecto\Zoologico\CrearArchivo.class
@@ -11,4 +12,5 @@ com\mycompany\proyecto\ModuloFase2\MenuFase2.class
 com\mycompany\proyecto\Zoologico\Mamifero.class
 com\mycompany\proyecto\ModuloFase2\visualizar.class
 com\mycompany\proyecto\Zoologico\MenuZoo.class
+com\mycompany\proyecto\ModuloFase2\AñadirAnimal.class
 com\mycompany\proyecto\Zoologico\LeerArchivo.class

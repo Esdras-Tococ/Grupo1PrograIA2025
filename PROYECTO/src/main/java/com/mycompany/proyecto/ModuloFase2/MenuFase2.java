@@ -14,7 +14,8 @@ public class MenuFase2 {
     
      int opcion =0;
 
-        do {
+        while (true) {
+        {
             System.out.println("===== MENU DE ANIMALES =====");
             System.out.println("1: Agregar Mamifero");
             System.out.println("2: Agregar Ave");
@@ -53,7 +54,7 @@ public class MenuFase2 {
                   
                     break;
                 case 6:
-                    
+                    System.out.println("NOS VEMOS,  GRCIAS POR TU TIEMPO;");
                     break;
                 default:
                     System.out.println("Opción inválida. Intenta de nuevo.");
@@ -62,7 +63,10 @@ public class MenuFase2 {
             
              } catch (Exception e) {
             }
-        } while (opcion != 6);
+        }
+            
+        }
+ 
     
      
      
