@@ -6,7 +6,7 @@ import com.mycompany.proyecto.ModuloFase2.BaseDeDatos;
 import java.util.Scanner;
 import com.mycompany.proyecto.Zoologico.MenuZoo;
 import com.mycompany.proyecto.ModuloFase2.MenuFase2;
-import com.mycompany.proyecto.ModuloFase2.BaseDeDatos;
+import com.mycompany.proyecto.Fase_3.Menu_3;
 
 
 public class Menu {
@@ -40,7 +40,7 @@ public class Menu {
                    MenuFase2.Menu2();
                     break;
                 case 3:
-                    BaseDeDatos.base();
+                    Menu_3.SubMenuFase3();
                     break;    
                 case 4:
                     System.out.println("!Hasta pronto! gracias por visitar el zoologico:");

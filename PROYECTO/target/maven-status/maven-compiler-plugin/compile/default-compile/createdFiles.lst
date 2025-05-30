@@ -12,5 +12,8 @@ com\mycompany\proyecto\ModuloFase2\MenuFase2.class
 com\mycompany\proyecto\Zoologico\Mamifero.class
 com\mycompany\proyecto\ModuloFase2\visualizar.class
 com\mycompany\proyecto\Zoologico\MenuZoo.class
-com\mycompany\proyecto\ModuloFase2\AÃ±adirAnimal.class
+com\mycompany\proyecto\Fase_3\Insertar.class
+com\mycompany\proyecto\Fase_3\Mostrar.class
+com\mycompany\proyecto\Fase_3\Menu_3.class
+com\mycompany\proyecto\ModuloFase2\AñadirAnimal.class
 com\mycompany\proyecto\Zoologico\LeerArchivo.class
