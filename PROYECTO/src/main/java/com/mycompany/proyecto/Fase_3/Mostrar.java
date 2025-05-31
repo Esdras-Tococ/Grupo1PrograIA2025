@@ -6,7 +6,9 @@ package com.mycompany.proyecto.Fase_3;
 
 import static com.mycompany.proyecto.Fase_3.Menu_3.scanner;
 import com.mycompany.proyecto.Fase_3.Insertar;
-
+import  com.mycompany.proyecto.Fase_3.ConsultaDB.Consultas;
+import com.mycompany.proyecto.Fase_3.ConsultaDB.DeleteAnimales;
+import com.mycompany.proyecto.Fase_3.ConsultaDB.UpdateAnimales;
 
 /**
  *
@@ -17,6 +19,8 @@ public class Mostrar {
 
     public static void mostrarSubMenuCRUD(String tipoAnimal) {
         while (true) {
+            
+            
             System.out.println("\n--- OPERACIONES CON " + tipoAnimal.toUpperCase() + " ---");
             System.out.println("C: Insertar");
             System.out.println("R: Consultar");
@@ -24,33 +28,37 @@ public class Mostrar {
             System.out.println("D: Eliminar");
             System.out.println("X: Volver al menú anterior");
             System.out.print("Seleccione una opción: ");
+            try {
+                
+            
             String opcion = scanner.nextLine().toUpperCase();
 
             switch (opcion) {
                 case "C":
-                    Insertar(tipoAnimal.toLowerCase());
+                  //  Insertar(tipoAnimal.toLowerCase());
                     break;
                 case "R":
-                    System.out.println("Función CONSULTAR para " + tipoAnimal + " (no implementada).");
+                   Consultas.consultar(tipoAnimal.toLowerCase());
                     break;
                 case "U":
-                    System.out.println("Función ACTUALIZAR para " + tipoAnimal + " (no implementada).");
+                    UpdateAnimales.updates(tipoAnimal);
                     break;
                 case "D":
-                    System.out.println("Función ELIMINAR para " + tipoAnimal + " (no implementada).");
+                    DeleteAnimales.delete(tipoAnimal);
                     break;
                 case "X":
                     return;
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
+                    break;
             }
-        }
+        } catch (Exception e) {
+                System.out.println(e);
+            }
     }
 
-    private static void Insertar(String toLowerCase) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
     
 }
-    
+}
