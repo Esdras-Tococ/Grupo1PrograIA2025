@@ -4,7 +4,6 @@
  */
 package com.mycompany.proyecto.Fase_3;
 
-import com.mycompany.proyecto.Fase_3.Insertar;
 import static com.mycompany.proyecto.Fase_3.Mostrar.mostrarSubMenuCRUD;
 import java.util.Scanner;
 
@@ -15,8 +14,7 @@ import java.util.Scanner;
 public class Menu_3 {
 
     static Scanner scanner = new Scanner(System.in);
-    private static String Insertar;
-
+    
     
     public static void SubMenuFase3() {
         while (true) {
@@ -26,6 +24,7 @@ public class Menu_3 {
             System.out.println("c: Trabajar con Reptil");
             System.out.println("d: Salir");
             System.out.print("Seleccione una opcion: ");
+            
             String opcion = scanner.nextLine().toLowerCase();
 
             switch (opcion) {

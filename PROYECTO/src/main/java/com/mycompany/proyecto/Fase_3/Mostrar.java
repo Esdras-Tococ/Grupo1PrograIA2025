@@ -5,7 +5,7 @@
 package com.mycompany.proyecto.Fase_3;
 
 import static com.mycompany.proyecto.Fase_3.Menu_3.scanner;
-import com.mycompany.proyecto.Fase_3.Insertar;
+import com.mycompany.proyecto.Fase_3.ConsultaDB.InsertarAnimal;
 import  com.mycompany.proyecto.Fase_3.ConsultaDB.Consultas;
 import com.mycompany.proyecto.Fase_3.ConsultaDB.DeleteAnimales;
 import com.mycompany.proyecto.Fase_3.ConsultaDB.UpdateAnimales;
@@ -35,7 +35,7 @@ public class Mostrar {
 
             switch (opcion) {
                 case "C":
-                  //  Insertar(tipoAnimal.toLowerCase());
+                   InsertarAnimal.Insertar(tipoAnimal.toLowerCase());
                     break;
                 case "R":
                    Consultas.consultar(tipoAnimal.toLowerCase());

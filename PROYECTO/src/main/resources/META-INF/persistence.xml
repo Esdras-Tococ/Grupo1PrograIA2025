@@ -7,10 +7,10 @@
     <class>com.mycompany.proyecto.Fase_3.ConsultaDB.Ave</class>
     <class>com.mycompany.proyecto.Fase_3.ConsultaDB.Animales</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/midb"/>
-      <property name="javax.persistence.jdbc.user" value="admin"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/PROYECTO"/>
+      <property name="javax.persistence.jdbc.user" value="EsdrasMorales"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="pass777"/>
+      <property name="javax.persistence.jdbc.password" value="51585740"/>
     </properties>
   </persistence-unit>
 </persistence>

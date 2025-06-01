@@ -163,5 +163,9 @@ public class Animales implements Serializable {
     public String toString() {
         return "com.mycompany.proyecto.Fase_3.ConsultaDB.Animales[ id=" + id + " ]";
     }
+
+    public void setAltura(BigInteger altura) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
