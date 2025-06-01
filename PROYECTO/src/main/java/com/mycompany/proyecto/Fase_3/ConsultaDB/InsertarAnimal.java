@@ -41,17 +41,6 @@ public class InsertarAnimal {
         
     }
      
-    public static boolean Respuestas (Scanner sc, String pregunta) {
-    while (true) {
-        System.out.print(pregunta + " (sí/no): ");
-        String respuesta = sc.nextLine().trim().toLowerCase();
-        if (respuesta.equals("sí") || respuesta.equals("si")) {
-            return true;
-        } else {
-            System.out.println("Respuetas validas 'si' o 'no'.");
-        }
-    }
-}
     
     public static void InsertaMamifero(EntityManagerFactory emf, AnimalesC animalc){
             
@@ -171,10 +160,16 @@ public class InsertarAnimal {
        animal1.setClasificacion(clasificacion);
        
        
-        boolean volador = Respuestas(sc, "¿PUEDE VOLAR:?");
-        ave.setVolador(volador);
-
-
+        System.out.println("Es volador si/no");
+        String venenoso= sc.next();
+        if (venenoso.toLowerCase().equals("si")) {
+        ave.setVolador(true); 
+        }
+        else{
+        ave.setVolador(false);
+        }
+        
+        
         System.out.println("TIPO DE PLUMAS:");
         String tipoPlumas = sc.next();
         ave.setTipoPlumas(tipoPlumas);
@@ -235,7 +230,7 @@ public static void InsertaReptil(EntityManagerFactory emf, AnimalesC animalc){
         BigDecimal  altura = sc.nextBigDecimal();
        animal1.setAltura(altura);
        
-          System.out.println("INGRESE LA CLASIFICACION");
+         System.out.println("INGRESE LA CLASIFICACION");
         String   clasificacion = sc.next();
        animal1.setClasificacion(clasificacion);
        
@@ -244,8 +239,14 @@ public static void InsertaReptil(EntityManagerFactory emf, AnimalesC animalc){
     String tipoEscamas = sc.next();
     reptil.setTipoEscamas(tipoEscamas);
 
-    boolean venenoso = Respuestas(sc, "¿ES VENENOSO?");
-        reptil.setVenenoso(venenoso);
+        System.out.println("Es venenoso si/no");
+    String venenoso= sc.next();
+    if (venenoso.toLowerCase().equals("si")) {
+    reptil.setVenenoso(true); 
+    }
+    else{
+    reptil.setVenenoso(false);
+    }
        
         try {
         animalc.create(animal1);
