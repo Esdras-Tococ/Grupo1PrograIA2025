@@ -1,6 +1,7 @@
 
 package com.mycompany.proyecto.Fase_3.ConsultaDB;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -44,18 +45,22 @@ public class Consultas {
 
 public static void consultarAve(AnimalesC animales,AveC aves){
       try {
-  List<Animales>lista = animales.findAnimalesEntities();
+ ArrayList<Animales>lista = animales.findAnimalesEntities();
   List<Ave> listaA = aves.findAveEntities();
  
-  
-  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PLUMAS");
+          System.out.println("============================================================================================");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PLUMAS","VOLADOR");
             for (Animales animales1 : lista) {
               if ("aves".equalsIgnoreCase(animales1.getClasificacion())) {
                     
                Integer id = animales1.getId();
                Ave ave = aves.findAve(id);
+                if (ave==null) {
+                      return;
+                  }
+           
                
-            System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s%n", animales1.getId(),animales1.getNombre(),animales1.getPeso()+"kg",animales1.getEdad()+"anos",animales1.getAltura()+"cm" ,ave.getTipoPlumas() );
+            System.out.printf("%-5s %-10s  %-10s  %-10s  %-10s %-10s  %-10s%n", animales1.getId(),animales1.getNombre(),animales1.getPeso()+"kg",animales1.getEdad()+" años",animales1.getAltura()+"cm" ,ave.getTipoPlumas(),ave.getVolador() );
            
                 
                 
@@ -86,16 +91,20 @@ public static void consultarAve(AnimalesC animales,AveC aves){
 
 public static void consultarReptil(AnimalesC animales,ReptilC reptil){
       try {
-  List<Animales>lista = animales.findAnimalesEntities();
-  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","TIPO ESCAMAS");
+          ArrayList<Animales>lista = animales.findAnimalesEntities();
+           System.out.println("============================================================================================");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","TIPO ESCAMAS","VENENOSO");
             for (Animales animales1 : lista) {
               if ("reptil".equalsIgnoreCase(animales1.getClasificacion())) {
                     
                Integer id = animales1.getId();
                Reptil reptil1 = reptil.findReptil(id);
-                //  System.out.println(reptil1.getTipoEscamas());
+                if (reptil1==null) {
+                      return;
+                  }
+           
                
-          System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s%n", animales1.getId(),animales1.getNombre(),animales1.getPeso()+"kg",animales1.getEdad()+"anos",animales1.getAltura()+"cm" ,reptil1.getTipoEscamas() );
+          System.out.printf("%-5s %-10s  %-10s  %-10s %-10s %-10s  %-10s%n", animales1.getId(),animales1.getNombre(),animales1.getPeso()+"kg",animales1.getEdad()+" años",animales1.getAltura()+"cm" ,reptil1.getTipoEscamas(),reptil1.getVenenoso());
            
                 
                 
@@ -133,16 +142,21 @@ public static void consultarReptil(AnimalesC animales,ReptilC reptil){
 
 public static void consultarMamifero(AnimalesC animales,MamiferoC mamifero){
       try {
-  List<Animales>lista = animales.findAnimalesEntities();
-  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PELAJE");
+  ArrayList<Animales>lista = animales.findAnimalesEntities();
+   System.out.println("============================================================================================");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PELAJE", "ESPECIE");
             for (Animales animales1 : lista) {
               if ("mamifero".equalsIgnoreCase(animales1.getClasificacion())) {
                     
                Integer id = animales1.getId();
+               
                Mamifero mamifero1 = mamifero.findMamifero(id);
+                  if (mamifero1==null) {
+                      return;
+                  }
            
                
-          System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s%n", animales1.getId(),animales1.getNombre(),animales1.getPeso()+"kg",animales1.getEdad()+"anos",animales1.getAltura()+"cm" ,mamifero1.getPelaje() );
+          System.out.printf("%-5s %-10s  %-10s  %-10s  %-10s %-10s  %-10s%n", animales1.getId(),animales1.getNombre(),animales1.getPeso()+"kg",animales1.getEdad()+" años",animales1.getAltura()+"cm" ,mamifero1.getPelaje(),mamifero1.getEspecie() );
            
                 
                 

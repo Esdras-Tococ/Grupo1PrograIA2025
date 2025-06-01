@@ -3,6 +3,7 @@ package com.mycompany.proyecto.Fase_3.ConsultaDB;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -64,10 +65,10 @@ public class AnimalesC implements Serializable {
         }
     }
 
-   public List<Animales> findAnimalesEntities() {
+   public ArrayList<Animales> findAnimalesEntities() {
     EntityManager em = getEntityManager();
     try {
-        return em.createNamedQuery("Animales.findAll", Animales.class).getResultList();
+        return new ArrayList<Animales> (em.createNamedQuery("Animales.findAll", Animales.class).getResultList());
     } finally {
         em.close();
     }

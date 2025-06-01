@@ -52,7 +52,10 @@ public class UpdateAnimales {
        
         while (true) {                      
                       
-                  
+             try {
+                
+            
+     
         System.out.println("INGRESE EL ID DEL REGISTRO A MODIFICAR / 0 para salir");
         Integer id= sc.nextInt();
             if (id==0) {
@@ -66,9 +69,11 @@ public class UpdateAnimales {
                       continue;
                   }
                
-        System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id");
-            System.out.printf("%-10s %-10s%n","NOMBRE","ESPECIE");
-        System.out.printf("%-10s %-10s%n", animal.getNombre(), mamifero1.getEspecie());
+        System.out.println("Es correcto el registro: SI.. para continuar NO.. para ingresar nuevo id");
+           System.out.println("============================================================================================");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PELAJE", "ESPECIE");
+                     
+          System.out.printf("%-5s %-10s  %-10s  %-10s  %-10s %-10s  %-10s%n", animal.getId(),animal.getNombre(),animal.getPeso()+"kg",animal.getEdad()+"anos",animal.getAltura()+"cm" ,mamifero1.getPelaje(),mamifero1.getEspecie() );
         
         String respuesta = sc.next();
         if (respuesta.toLowerCase().equals("si")) {
@@ -142,6 +147,14 @@ public class UpdateAnimales {
         else{
         
         continue;}
+        
+        
+        
+        } catch (Exception e) {
+                 System.out.println("HUbo un erro");
+        return;}
+        
+        
                   }//while
         
              
@@ -156,7 +169,11 @@ public class UpdateAnimales {
     public static void updateReptil(AnimalesC animales, EntityManagerFactory emf){
              Scanner sc = new Scanner(System.in);
         ReptilC Reptil = new ReptilC(emf);
-       
+        try {
+            
+        
+            
+        
         while (true) {                      
                       
                   
@@ -174,8 +191,9 @@ public class UpdateAnimales {
                   }
                
         System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id");
-            System.out.printf("%-10s %-10s%n","NOMBRE","ESPECIE");
-        System.out.printf("%-10s %-10s%n", animal.getNombre(), reptil1.getTipoEscamas());
+                     System.out.println("============================================================================================");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","TIPO ESCAMAS","VENENOSO");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s %-10s  %-10s%n", animal.getId(),animal.getNombre(),animal.getPeso()+"kg",animal.getEdad()+"anos",animal.getAltura()+"cm" ,reptil1.getTipoEscamas(),reptil1.getVenenoso());
         
         String respuesta = sc.next();
         if (respuesta.toLowerCase().equals("si")) {
@@ -256,9 +274,17 @@ public class UpdateAnimales {
         else{
         
         continue;}
+        
+        
+        
+        
+        
+        
                   }//while
         
-             
+             } catch (Exception e) {
+                 System.out.println("Hubo un error");
+        }
     
 
     
@@ -271,7 +297,9 @@ public class UpdateAnimales {
 public static void updateAve(AnimalesC animales, EntityManagerFactory emf){
              Scanner sc = new Scanner(System.in);
         AveC Ave = new AveC(emf);
-       
+       try {
+        
+   
         while (true) {                      
                       
                   
@@ -289,8 +317,9 @@ public static void updateAve(AnimalesC animales, EntityManagerFactory emf){
                   }
                
         System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id");
-            System.out.printf("%-10s %-10s%n","NOMBRE","ESPECIE");
-        System.out.printf("%-10s %-10s%n", animal.getNombre(), ave1.getTipoPlumas());
+                 System.out.println("============================================================================================");
+  System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PLUMAS","VOLADOR");
+       System.out.printf("%-5s %-10s  %-10s  %-10s  %-10s %-10s  %-10s%n", animal.getId(),animal.getNombre(),animal.getPeso()+"kg",animal.getEdad()+"anos",animal.getAltura()+"cm" ,ave1.getTipoPlumas(),ave1.getVolador() );
         
         String respuesta = sc.next();
         if (respuesta.toLowerCase().equals("si")) {
@@ -373,7 +402,9 @@ public static void updateAve(AnimalesC animales, EntityManagerFactory emf){
         continue;}
                   }//while
         
-             
+              } catch (Exception e) {
+                  System.out.println("HUbo un error");
+    }
     
 
     

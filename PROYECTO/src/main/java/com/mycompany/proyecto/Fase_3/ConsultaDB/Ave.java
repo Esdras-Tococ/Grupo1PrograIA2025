@@ -49,9 +49,9 @@ public class Ave implements Serializable {
         this.idAnimal = idAnimal;
     }
 
-    public Ave(Integer idAnimal, int id, boolean volador, String tipoPlumas) {
+    public Ave(Integer idAnimal,boolean volador, String tipoPlumas) {
         this.idAnimal = idAnimal;
-        this.id = id;
+     
         this.volador = volador;
         this.tipoPlumas = tipoPlumas;
     }

@@ -73,8 +73,8 @@ public class DeleteAnimales {
         }
             System.out.println("Seguro que desea eliminar el regsitro:");
             
-            System.out.printf("%-10s %-10s%n", "ID", "NOMBRE");
-                 System.out.printf("%-10s %-10s%n",ani.getId(),ani.getNombre());
+            System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "ID", "NOMBRE","PESO","ALTURA","CONSUMO","CLASIFICAION");
+                 System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n",ani.getId(),ani.getNombre(),ani.getPeso(),ani.getAltura(),ani.getConsumo(),ani.getClasificacion());
                  
                  
                  
@@ -144,8 +144,8 @@ public class DeleteAnimales {
         }
             System.out.println("Seguro que desea eliminar el regsitro:");
             
-            System.out.printf("%-10s %-10s%n", "ID", "NOMBRE");
-                 System.out.printf("%-10s %-10s%n",ani.getId(),ani.getNombre());
+     System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "ID", "NOMBRE","PESO","ALTURA","CONSUMO","CLASIFICAION");
+               System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n",ani.getId(),ani.getNombre(),ani.getPeso(),ani.getAltura(),ani.getConsumo(),ani.getClasificacion());
                  
                  
                  
@@ -209,9 +209,9 @@ public class DeleteAnimales {
             continue;
         }
             System.out.println("Seguro que desea eliminar el regsitro:");
-            
-            System.out.printf("%-10s %-10s%n", "ID", "NOMBRE");
-                 System.out.printf("%-10s %-10s%n",ani.getId(),ani.getNombre());
+            System.out.println("================================================================================");
+             System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "|ID", "NOMBRE","PESO","ALTURA","CONSUMO","CLASIFICAION|");
+               System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n",ani.getId(),ani.getNombre(),ani.getPeso(),ani.getAltura(),ani.getConsumo(),ani.getClasificacion());
                  
                  
                  

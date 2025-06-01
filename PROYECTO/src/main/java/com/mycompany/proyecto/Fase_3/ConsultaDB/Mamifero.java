@@ -26,16 +26,20 @@ import javax.persistence.Table;
     @NamedQuery(name = "Mamifero.findByPelaje", query = "SELECT m FROM Mamifero m WHERE m.pelaje = :pelaje"),
     @NamedQuery(name = "Mamifero.findByEspecie", query = "SELECT m FROM Mamifero m WHERE m.especie = :especie")})
 public class Mamifero implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-    @Basic(optional = false)
-    @Column(name = "id")
-    private int id;
     @Id
     @Basic(optional = false)
     @Column(name = "id_animal")
     private Integer idAnimal;
+
+    @Column(name = "id", insertable = false, updatable = false)
+    private int id; 
+    
+    
+    
     @Basic(optional = false)
+    
+    
+    
     @Column(name = "pelaje")
     private String pelaje;
     @Basic(optional = false)
@@ -49,9 +53,9 @@ public class Mamifero implements Serializable {
         this.idAnimal = idAnimal;
     }
 
-    public Mamifero(Integer idAnimal, int id, String pelaje, String especie) {
+    public Mamifero(Integer idAnimal, String pelaje, String especie) {
         this.idAnimal = idAnimal;
-        this.id = id;
+     
         this.pelaje = pelaje;
         this.especie = especie;
     }
