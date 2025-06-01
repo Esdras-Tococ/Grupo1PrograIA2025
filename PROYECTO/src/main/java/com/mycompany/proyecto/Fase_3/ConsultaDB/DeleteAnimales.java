@@ -23,10 +23,10 @@ public class DeleteAnimales {
     
                 break;
                 case "ave":
-                    deleteReptil(animales, emf);
+                    deleteAve(animales, emf);
                 break;
                 case "reptil":
-                    deleteAve(animales, emf);
+                    deleteReptil(animales, emf);
                 break;
             default:
                 throw new AssertionError();
@@ -71,12 +71,12 @@ public class DeleteAnimales {
             System.out.println("No existe el registro");
             continue;
         }
-            System.out.println("Seguro que desea eliminar el regsitro:");
-            
+        
+            System.out.println("============================================================================================");
             System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "ID", "NOMBRE","PESO","ALTURA","CONSUMO","CLASIFICAION");
                  System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n",ani.getId(),ani.getNombre(),ani.getPeso(),ani.getAltura(),ani.getConsumo(),ani.getClasificacion());
-                 
-                 
+           System.out.println("============================================================================================");      
+                   System.out.println("Seguro que desea eliminar el regsitro:");  
                  
                  String  user = sc.next();
                  if (user.toLowerCase().equals("si")) {
@@ -142,12 +142,12 @@ public class DeleteAnimales {
             System.out.println("No existe el registro");
             continue;
         }
-            System.out.println("Seguro que desea eliminar el regsitro:");
             
+            System.out.println("============================================================================================");
      System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "ID", "NOMBRE","PESO","ALTURA","CONSUMO","CLASIFICAION");
                System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n",ani.getId(),ani.getNombre(),ani.getPeso(),ani.getAltura(),ani.getConsumo(),ani.getClasificacion());
-                 
-                 
+             System.out.println("============================================================================================");    
+           System.out.println("Seguro que desea eliminar el regsitro:");      
                  
                  String  user = sc.next();
                  if (user.toLowerCase().equals("si")) {
@@ -204,21 +204,25 @@ public class DeleteAnimales {
            
             
         Animales ani = animales.findAnimales(id);
-        if (ani==null) {
+        Ave ave1 = ave.findAve(id);
+            
+            
+        if (ave1==null) {
             System.out.println("No existe el registro");
             continue;
         }
-            System.out.println("Seguro que desea eliminar el regsitro:");
+       
+        
+            
             System.out.println("================================================================================");
              System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n", "|ID", "NOMBRE","PESO","ALTURA","CONSUMO","CLASIFICAION|");
                System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s%n",ani.getId(),ani.getNombre(),ani.getPeso(),ani.getAltura(),ani.getConsumo(),ani.getClasificacion());
-                 
-                 
+                 System.out.println("============================================================================================");
+            System.out.println("Seguro que desea eliminar el regsitro:");     
                  
                  String  user = sc.next();
                  if (user.toLowerCase().equals("si")) {
-                
-            
+               
         try {
          animales.destroy(id);
         ave.destroy(id);
@@ -230,7 +234,7 @@ public class DeleteAnimales {
                  else{
                  continue;
                  
-                 }
+                 } //else null
                  
                  
                  

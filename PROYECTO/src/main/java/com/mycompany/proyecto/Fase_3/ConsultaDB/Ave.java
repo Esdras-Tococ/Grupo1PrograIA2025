@@ -27,14 +27,16 @@ import javax.persistence.Table;
     @NamedQuery(name = "Ave.findByTipoPlumas", query = "SELECT a FROM Ave a WHERE a.tipoPlumas = :tipoPlumas")})
 public class Ave implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Basic(optional = false)
-    @Column(name = "id")
-    private int id;
-    @Id
+     @Id
     @Basic(optional = false)
     @Column(name = "id_animal")
     private Integer idAnimal;
+
+    @Column(name = "id", insertable = false, updatable = false)
+    private int id; 
+    
+    
+    
     @Basic(optional = false)
     @Column(name = "volador")
     private boolean volador;

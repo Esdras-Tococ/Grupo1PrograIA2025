@@ -56,7 +56,7 @@ public class UpdateAnimales {
                 
             
      
-        System.out.println("INGRESE EL ID DEL REGISTRO A MODIFICAR / 0 para salir");
+        System.out.println("INGRESE EL ID DEL REGISTRO A MODIFICAR | 0 PARA SALIR");
         Integer id= sc.nextInt();
             if (id==0) {
                 return;
@@ -69,13 +69,15 @@ public class UpdateAnimales {
                       continue;
                   }
                
-        System.out.println("Es correcto el registro: SI.. para continuar NO.. para ingresar nuevo id");
+       
            System.out.println("============================================================================================");
   System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PELAJE", "ESPECIE");
                      
           System.out.printf("%-5s %-10s  %-10s  %-10s  %-10s %-10s  %-10s%n", animal.getId(),animal.getNombre(),animal.getPeso()+"kg",animal.getEdad()+"anos",animal.getAltura()+"cm" ,mamifero1.getPelaje(),mamifero1.getEspecie() );
-        
-        String respuesta = sc.next();
+       System.out.println("============================================================================================");
+          System.out.println("Es correcto el registro: SI.. para continuar NO.. para ingresar nuevo id: ");
+         
+          String respuesta = sc.next();
         if (respuesta.toLowerCase().equals("si")) {
             System.out.println("Que campo desea cambiar");
              String user = sc.next();
@@ -190,12 +192,14 @@ public class UpdateAnimales {
                       continue;
                   }
                
-        System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id");
+      
                      System.out.println("============================================================================================");
   System.out.printf("%-5s %-10s  %-10s  %-10s %-10s %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","TIPO ESCAMAS","VENENOSO");
   System.out.printf("%-5s %-10s  %-10s  %-10s %-10s %-10s  %-10s%n", animal.getId(),animal.getNombre(),animal.getPeso()+"kg",animal.getEdad()+"anos",animal.getAltura()+"cm" ,reptil1.getTipoEscamas(),reptil1.getVenenoso());
-        
-        String respuesta = sc.next();
+   System.out.println("============================================================================================");      
+  System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id:  "); 
+       
+         String respuesta = sc.next();
         if (respuesta.toLowerCase().equals("si")) {
             System.out.println("Que campo desea cambiar");
              String user = sc.next();
@@ -316,11 +320,12 @@ public static void updateAve(AnimalesC animales, EntityManagerFactory emf){
                       continue;
                   }
                
-        System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id");
+       
                  System.out.println("============================================================================================");
   System.out.printf("%-5s %-10s  %-10s  %-10s %-10s  %-10s  %-10s%n", "ID","NOMBRE","PESO","EDAD","ALTURA","PLUMAS","VOLADOR");
        System.out.printf("%-5s %-10s  %-10s  %-10s  %-10s %-10s  %-10s%n", animal.getId(),animal.getNombre(),animal.getPeso()+"kg",animal.getEdad()+"anos",animal.getAltura()+"cm" ,ave1.getTipoPlumas(),ave1.getVolador() );
-        
+        System.out.println("============================================================================================");
+        System.out.println("Es correcto el registro: SI para continuar no para ingresar nuevo id: "); 
         String respuesta = sc.next();
         if (respuesta.toLowerCase().equals("si")) {
             System.out.println("Que campo desea cambiar");

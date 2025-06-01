@@ -41,10 +41,10 @@ public class Mostrar {
                    Consultas.consultar(tipoAnimal.toLowerCase());
                     break;
                 case "U":
-                    UpdateAnimales.updates(tipoAnimal);
+                    UpdateAnimales.updates(tipoAnimal.toLowerCase());
                     break;
                 case "D":
-                    DeleteAnimales.delete(tipoAnimal);
+                    DeleteAnimales.delete(tipoAnimal.toLowerCase());
                     break;
                 case "X":
                     return;

@@ -13,7 +13,7 @@ public class Consultas {
     public static  void consultar(String animal) {
   EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_PROYECTO_jar_1.0-SNAPSHOTPU");
     AnimalesC animales = new AnimalesC(emf);
-        switch (animal) {
+        switch (animal.toLowerCase()) {
             case "reptil":
               
                     ReptilC reptil =new ReptilC(emf);
